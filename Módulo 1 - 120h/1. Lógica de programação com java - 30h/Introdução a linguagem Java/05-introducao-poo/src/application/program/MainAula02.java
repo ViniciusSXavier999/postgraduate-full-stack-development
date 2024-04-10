@@ -1,6 +1,8 @@
-package application;
+package application.program;
 
-public class Main {
+import application.Aula02POO_Classes;
+
+public class MainAula02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
