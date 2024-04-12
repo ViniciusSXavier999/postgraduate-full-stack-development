@@ -1,6 +1,4 @@
 package application.program;
-
-import application.Aula02POO_Composicao_ClasseItens;
 import application.Aula02POO_Composicao_ClassePedido;
 
 public class MainAula02 {
