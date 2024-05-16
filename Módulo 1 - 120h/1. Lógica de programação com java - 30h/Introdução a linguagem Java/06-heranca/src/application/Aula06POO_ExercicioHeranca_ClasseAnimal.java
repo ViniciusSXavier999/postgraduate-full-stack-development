@@ -2,7 +2,7 @@ package application;
 
 public class Aula06POO_ExercicioHeranca_ClasseAnimal {
 
-	protected String nome;
+	public String nome;
 
 	public void setNome(String nome) {
 		this.nome = nome;
