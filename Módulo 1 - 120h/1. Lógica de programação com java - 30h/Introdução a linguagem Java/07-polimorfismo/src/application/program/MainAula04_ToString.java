@@ -2,7 +2,7 @@ package application.program;
 
 // AULA SOBRE MÉTODO TO STRING
 
-public class MainAula04 {
+public class MainAula04_ToString {
 
 	public static void main(String[] args) {
 	
@@ -25,7 +25,7 @@ public class MainAula04 {
 		// comparar segunda com a terceira 
 		
 		result = segunda.equals(terceira);
-		System.out.println("SEgunda é igual a terceira? " + result);
+		System.out.println("Segunda é igual a terceira? " + result);
 
 	}
 
