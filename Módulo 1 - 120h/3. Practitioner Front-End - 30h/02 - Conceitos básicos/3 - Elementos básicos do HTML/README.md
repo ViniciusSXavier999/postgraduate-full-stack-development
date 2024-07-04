@@ -1,6 +1,6 @@
 ## TAGS INICIAS
 
-- **Títulos**: As *tags* < h1 > a < h6 > são usadas para definir diferentes tamanhos de título. Onde <h1> define o título mais importante e <h6>, o título menos importante.
+- **Títulos**: As *tags* < h1 > a < h6 > são usadas para definir diferentes tamanhos de título. Onde < h1 > define o título mais importante e < h6 >, o título menos importante.
 
 > Quão maior ela é, menor é o tamanho do texto.
 > 
