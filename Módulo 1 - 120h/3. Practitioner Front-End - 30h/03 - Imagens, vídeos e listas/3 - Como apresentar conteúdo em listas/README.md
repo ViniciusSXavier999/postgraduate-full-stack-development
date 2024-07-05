@@ -6,7 +6,7 @@
 
 <img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/listaN%C3%A3oOrdenada.png width="300"/>
 
-### Listas ordenada (vão utilizar números em ordem decrescente)
+### Listas ordenada (vão utilizar números em ordem crescente)
 
 <img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/listaOrdenada.png width="300"/>
 
