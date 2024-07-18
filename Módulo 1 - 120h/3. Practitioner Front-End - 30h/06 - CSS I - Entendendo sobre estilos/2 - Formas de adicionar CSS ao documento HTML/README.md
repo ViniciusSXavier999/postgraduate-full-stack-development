@@ -2,7 +2,7 @@
 
 ## Formas de adicionar o CSS no HTML
 
-<img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/formasDeAdiconarCssAoHTML.png width="300"/>
+<img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/formasDeAdiconarCssAoHTML.png width="700"/>
 
 ---
 
