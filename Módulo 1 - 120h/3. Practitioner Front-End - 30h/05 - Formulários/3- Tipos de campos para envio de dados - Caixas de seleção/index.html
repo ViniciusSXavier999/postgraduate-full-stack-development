@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem dos sonhos</title>
+</head>
+
+<body>
+    <header>
+        <!-- tag nav é utilizada para criar menus de navegação -->
+        <!-- Estamos criando uma lista não ordenada, por isso utilizar o elemento ul -->
+        <nav>
+            <!-- vamos criar um MENU para cada seção da página -->
+            <ul>
+                <li>Pacotes</li>
+                <li>Taxa</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+        <h1>Venha realizar a viagem dos sonhos</h1>
+    </header>
+
+    <!--DEFININDO UMA SEÇÃO DE VENDAS DE PACOTE-->
+    <section>
+
+        <h2>Conheça nossos pacotes</h2>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            <hr>
+        </p>
+
+        <figure>
+            <!-- Inserindo imagem 1 -->
+            <img src="img/nossos-pacotes/sp.jpg" alt="Cidade de são paulo">
+            <figcaption>São paulo</figcaption>
+        </figure>
+
+        <figure>
+            <!-- Inserindo imagem 2 -->
+            <img src="img/nossos-pacotes/rj.jpg" alt="rio de janeiro">
+            <figcaption>Rio de janeiro</figcaption>
+        </figure>
+
+        <figure>
+            <!-- Inserindo imagem 3 -->
+            <img src="img/nossos-pacotes/ceara.jpg" alt="ceara">
+            <figcaption>Ceára</figcaption>
+        </figure>
+    </section>
+
+    <!-- TAG VIDEO -->
+    <!-- O atributo controls vai definir o play no video e o volume -->
+    <video width="400" height="310" controls>
+        <!-- TAG que vai conter a origem do video -->
+        <!-- atributo type -> Vai informar o tipo da extensão do vídeo -->
+        <source src="video/videosp.mp4" type="video/mp4">
+
+        <!-- Caso o navegador não consiga exibir o video vai exibir essa mensagem -->
+        Seu navegador não suporta o formato do vídeo
+
+    </video>
+
+    <!-- CRIANDO UMA NOVA SEÇÃO DE FORMULÁRIO -->
+    <section>
+        <h2>Orçamento</h2>
+
+        <form method="GET" action="">
+            <label for="Nome">Nome</label><br>
+            <!-- O name é um atributo muito importante para os campos do tipo input. 
+             Ele serve para identificar o valor daquela variável no nosso backend -->
+            <input type="text" name="nome"><br><br>
+
+
+            <label>Email</label><br>
+            <input type="email" required name="email"><br><br>
+
+
+            <label">Data de ida</label><br>
+                <input type="date" name="dataIda"><br><br>
+
+                <label>Data de volta</label><br>
+                <input type="date" name="dataVolta"><br><br>
+
+                <label>Quantidade de pessoas</label><br>
+                <input type="number" name="qtdPessoas"><br><br>
+
+                <fieldset>
+                    <!-- CAMPO DA CAIXA DE SELEÇÃO -->
+                    <legend>Quais serviços deseja contratar?</legend>
+
+
+                    <!--Criando campo de seleção-->
+                    <!-- Esse value é o que vai ser enviado para o servidor caso o cliente clique 
+             na caixa de seleção -->
+                    <!-- label 1 -->
+                    <label>
+                        <br><input type="checkbox" name="passagens" value="Passagens"> Compra de passagens
+                    </label>
+
+                    <!-- label 2 -->
+                    <label>
+                        <br><input type="checkbox" name="hospedage" value="Hospedagem"> Reserva de hospedagem
+                    </label>
+
+                    <!-- label 3 -->
+                    <label>
+                        <br><input type="checkbox" name="veiculos" value="Veículo">Reserva de veículos
+                    </label>
+
+
+
+
+
+                </fieldset>
+                <br>
+
+                <br><label>Comentário</label><br>
+                <textarea rows="5" name="comentario"></textarea><br><br>
+
+
+                <button>Salvar</button>
+
+        </form>
+
+    </section>
+
+    <h2>Taxas e serviços</h2>
+    <p>Veja nossas taxas para serviços</p>
+    <!-- CRIANDO UMA NOVA SEÇÃO -->
+    <section>
+        <!-- VAMOS CRIAR UMA TABELA PARA EXIBIR OS VALORES DESSES NOSSOS SERVIÇOS -->
+        <table border>
+            <!-- DEFININDO TITULO PARA TABELA -->
+            <caption>Descrição dos serviços e respectivos valores</caption>
+
+            <!-- DEFININDO O CABEÇALHO DA TABELA -->
+            <thead>
+                <!-- criando linhas -->
+                <tr>
+                    <!-- Dentro dessas linhas existe as colunas -->
+                    <!-- TH coloca em negrito e centraliza -->
+                    <th>
+                        Serviço
+                    </th>
+                    <th>
+                        Valor
+                    </th>
+                </tr>
+            </thead>
+
+            <!-- Definindo o corpo da tabela -->
+            <tbody>
+
+                <!-- segundo linha -->
+                <tr>
+                    <td>
+                        Reserva de hotel
+                    </td>
+                    <td>
+                        R$150,00
+                    </td>
+                </tr>
+
+                <!-- terceira linha -->
+                <tr>
+                    <td>
+                        Compra de passagens
+                    </td>
+                    <td>
+                        R$100,00
+                    </td>
+
+                    <!-- quarta linha -->
+                <tr>
+                    <td>
+                        Aluguel de carros
+                    </td>
+                    <td>
+                        R$50,00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!--Definindo RODAPÉ-->
+    <footer>
+        <p>Desenvolvido por Vinicius Xavier</p>
+    </footer>
+
+    <!--Visualmente não muda nada o código acima, mas semânticamente sim e também vai influênciar 
+    de diversas formas, principalmente nas ferramentas de busca, pois a web evolui cada vez mais
+    para o conteúdo semântico-->
+
+
+</body>
+
+</html>
