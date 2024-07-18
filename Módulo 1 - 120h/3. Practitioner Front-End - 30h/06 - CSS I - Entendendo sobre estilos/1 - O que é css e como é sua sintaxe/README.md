@@ -31,7 +31,7 @@
 
 ### HISTORICO DO CSS
 
-<img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/csshistorico.png width="300"/>
+<img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/csshistorico.png width="400"/>
 
 ---
 
@@ -45,7 +45,7 @@
 
 ## SINTAXE DO CSS
 
-<img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/csssintaxe.png width="300"/>
+<img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/csssintaxe.png width="700"/>
 
 > É possível alterar elementos semânticos do HTML com o CSS
 >
