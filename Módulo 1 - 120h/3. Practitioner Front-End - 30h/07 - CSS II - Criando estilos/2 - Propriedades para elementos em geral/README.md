@@ -1,17 +1,10 @@
 # PROPRIEDADES PARA ELEMENTOS EM GERAL
 
-🏆
+🏆 A propriedade **background é um atalho para definir os valores de fundo individuais em um único lugar da folha de estilo**
 
-A propriedade **background é um atalho para definir os valores de fundo individuais em um único lugar da folha de estilo**
+🏆 A propriedade margin do CSS define a área de margem dos quatro lados do elemento 
 
-
-🏆
-
-A propriedade margin do CSS define a área de margem dos quatro lados do elemento 
-
-📌
-
-Também é possível definir a margem individualmente para cada lado do elemento, (esquerdo, direito, cima, baixo)
+📌Também é possível definir a margem individualmente para cada lado do elemento, (esquerdo, direito, cima, baixo)
 
 
 
