@@ -9,7 +9,7 @@
 - Espaçamento entre linhas 👉🏻 line-height
 - Espaçamento entre letras 👉🏻 letter-spacing
     
-   <img src=https://github.com/ViniciusSXavier999/Assets/commit/92cac9ea30187e36ce8c5c21a7cec092b1c5ddce width="700"/>
+   <img src=https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/propriedadestexto.png width="700"/>
     
 
 > Font-family especifica a família da fonte e família genérica, caso o navegador não possua.
