@@ -1,0 +1,47 @@
+h1{
+    font-size: 50px;
+    color:  rgb(255, 253, 253);
+    padding: 15px;
+    text-align: center;
+}
+
+h2{
+    font-size: 20px;
+
+    /*Passa o texto inteiro para caixa alta*/
+    text-transform: uppercase;
+
+    color: #303030;
+
+    font-weight: 600;
+}
+
+
+
+table {
+    width: 100%;
+}
+
+table td{
+    color: #000000;
+    padding: 5px;
+}
+
+/* UTILIZANDO PSEUDO CLASSES */
+/* nth-child -> Quer dizer qual filho daquelas linhas você quer estilizar, nesse caso eu quero o filho "even" que é par em inglês, e quando a linha for PAR o background dela será esse. */
+table tr:nth-child(even) {
+    background-color: rgb(228, 236, 229);
+}
+
+table tr:nth-child(odd) {
+    background-color: #93a5b1;
+}
+
+table thead th {
+    background-color: #000000;
+    color: white;
+}
+
+
+
+
