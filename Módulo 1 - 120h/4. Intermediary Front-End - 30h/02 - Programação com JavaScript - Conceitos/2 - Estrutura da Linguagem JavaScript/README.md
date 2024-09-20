@@ -16,7 +16,7 @@
 - Torna mais fácil ler ou entender o que o código faz.
 - Também pode ser usado para desabilitar código, evitando sua execução
 
-<img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/comentariosjavascript.png" />
+<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/comentariosjavascript.png" />
 
 ---
 
@@ -28,7 +28,7 @@
 - let: declara uma variável local, escopo do bloco, a inicialização do valor é opcional
 - const: declara uma variável de escopo do bloco, não pode ter seu valor alterado.
 
- <img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/declara%C3%A7%C3%A3ovar.png" />
+ <img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/declara%C3%A7%C3%A3ovar.png" />
 
 
 Explicação detalhada 👇🏻
@@ -76,4 +76,4 @@ Explicação detalhada 👇🏻
 - Não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução
 - Deve ser inicializada com um valor
 
-    <img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/constante.png" />
+    <img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/constante.png" />
