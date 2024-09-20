@@ -4,7 +4,7 @@
 
 - Basta pressionar F8 no teclado
 
- <img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/variaveis.png" />
+ <img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/variaveis.png" />
 
 ---
 
