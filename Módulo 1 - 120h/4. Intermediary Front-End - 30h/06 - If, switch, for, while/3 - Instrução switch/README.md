@@ -3,7 +3,7 @@
 > Fica mais elegante utilizar o switch do que o else if no código
 > 
 
-🏆 switch: avalia uma expressão, combinando o valor da para um cláusula case, e executa as instruções associadas ao case
+🏆 switch: avalia uma expressão, combinando o valor da expressão para uma cláusula case, e executa as instruções associadas ao case
 
 
 <img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/switch1.png" />
