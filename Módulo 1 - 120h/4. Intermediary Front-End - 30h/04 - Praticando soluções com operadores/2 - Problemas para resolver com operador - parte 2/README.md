@@ -1,3 +1,5 @@
+## Exercício 4
+
 4️⃣ Faça um algoritmo que leia três notas de um aluno, calcule e escreva a média final deste aluno. Considerar que a média é ponderada e que o peso das notas 
 é 2, 3 e 5.
 
