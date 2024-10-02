@@ -14,9 +14,9 @@
 - For/in: É usado para percorrer as propriedades do objeto
 - For/of: É usado para percorrer uma matriz de objetos iteráveis
     
-    <img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forsintaxe.png" />
+    <img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forsintaxe.png" />
 
-    <img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forpercorrendoarray.png" />
+    <img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forpercorrendoarray.png" />
     
     > 0 é menor do que 2(tamanho do array) ? se sim, vou somar mais 1 que é o i++, em seguida vou entrar dentro do bloco do array e realizar o que está sendo pedido, depois vou voltar no inicio e assim por diante até i ser menor que carros.
     > 
@@ -29,12 +29,12 @@
 
 ---
 
-<img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forfluxodetrabalho.png" />
+<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forfluxodetrabalho.png" />
 ---
 
 ## FOR/IN
 
-<img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forin.png" />
+<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forin.png" />
 
 > Basicamente eu estou dizendo “Cada elemento do carro eu vou colocando in “i” que é uma constante nesse caso.
 > 
@@ -43,7 +43,7 @@
 
 ## ITERAÇÕES
 
-<img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forOf.png" />
+<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/forOf.png" />
 
 > O for/of já joga direto, cada elemento do carros já está no carro.
 >
