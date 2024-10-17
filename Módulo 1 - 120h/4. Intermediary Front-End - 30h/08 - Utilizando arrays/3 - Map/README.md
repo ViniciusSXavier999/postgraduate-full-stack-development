@@ -22,7 +22,7 @@ A função de callback será executada em cada um dos elementos do array
 
 🏆 O argumento this será usado dentro da função de callback. Por padrão, esse valor é undefined. Por exemplo, Aqui está a forma de mudar o valor de this para o número 80:
 
- <img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/mapjs.png" />
+ <img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/mapjs.png" />
 
 
 
