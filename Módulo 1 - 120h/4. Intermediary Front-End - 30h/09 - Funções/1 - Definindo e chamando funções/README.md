@@ -43,11 +43,15 @@ function nome(argumento) {
 
 ## EXPRESSÃO DE FUNÇÃO
 
-```jsx
+
 🚨 Funções também podem ser criadas por uma expressão de função.
 
 Tal função pode ser anônima; ele não tem que ter um nome.
 
 Por exemplo, a função square poderia ter sido definida como:
+```jsx
+var calcula = function(numero) {return numero * 2}; // o return dele vai para calcula, tornando a função anonima
+
+var x = calcula(4) // retorna o valor 8
 ```
 
