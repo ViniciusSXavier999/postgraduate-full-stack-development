@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com eventos parte 2</title>
+</head>
+<body>
+    <form>
+        <label>Email</label>
+        <input type="email" id="email"/>
+
+        <label>Nome</label>
+        <input type="text" id="nome">
+
+        <button type="submit" onclick="novoItem()">Cadastrar</button>
+    </form>
+</body>
+
+    <script>
+        // Quando for clicado em algum botão, eu quero que mostre o valor que foi digitado  no input
+        function novoItem(){
+            var camponome = document.getElementById("nome")
+            alert('Seu nome é: ' + camponome.value)
+        }
+
+     
+    </script>
+
+</html>

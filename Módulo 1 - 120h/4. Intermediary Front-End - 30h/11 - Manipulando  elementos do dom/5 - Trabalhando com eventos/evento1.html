@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando a questão de eventos em Javascript</title>
+</head>
+<body>
+    <p>Clique no botão a seguir e veja o resultado</p>
+
+    <!-- ONCLICK -> É uma das maneiras de realizar esses eventos em Javascript -->
+
+    <form action="">
+        <input type="button" onclick="exemploEvento()" value="Apresentar"/>
+    </form>
+
+    <h1 id="exemplo" onmouseover="passarMousePorCima()" onmouseout="tirarMouse()">
+        Troca de texto
+    </h1>
+</body>
+
+    <script>
+
+        // Função que será chamada quando eu clicar no meu botão lá no HTML
+        function exemploEvento(){
+            alert("Mostrando o alert")
+        }
+
+        // Função vai ser executada quando você passar o mouse por cima de alguma coisa
+        function passarMousePorCima(){
+            // eu vou pegar o próprio exemplo e mudar o texto dele
+            document.getElementById("exemplo").innerHTML = "Evento com mouse over" // é possivel utilizar o inner diretamente dessa forma, sem ter que colocar ele em alguma variavel
+
+        }
+
+        function tirarMouse(){
+               document.getElementById("exemplo").innerHTML = "Evento com mouse out"
+        }
+
+    </script>
+
+</html>
