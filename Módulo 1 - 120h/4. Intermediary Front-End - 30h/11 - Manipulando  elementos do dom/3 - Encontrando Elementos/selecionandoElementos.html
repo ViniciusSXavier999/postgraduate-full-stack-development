@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos DOM</title>
+</head>
+<body>
+        <h1>Usando seletor do DOM</h1>
+
+        <ul>
+            <li>Java</li>
+            <li>NodeJS</li>
+            <li>PHP</li>
+            <li>C++</li>
+        </ul>
+
+        <!-- É o 0 no array do getElements -->
+
+        <div id="conteudo" name="divconteudo" class="mensagem">
+
+
+        </div>
+
+        <!-- É o 1 no array do getElements -->
+
+        <div name="divconteudo" class="mensagem">
+
+
+        </div>
+
+        <!-- É o 2 no array do getElements -->
+
+        <div name="divconteudo" class="mensagem">
+
+            
+        </div>
+
+        <span id="novospan" class="novo">
+
+            texto no span querySelector
+
+        </span>
+
+        <div class="mensagem">
+
+        </div>
+</body>
+
+    <script>
+
+        // Acessando as minhas linhas através do HTML, será criado um array
+        elemento0 = document.getElementsByTagName('li')
+
+        // Selecionando apenas o primeiro elemento do array
+        elemento1 =  document.getElementsByTagName('li')[0]
+        //  Manipulando meu elemento trocando a cor
+        elemento1.style.color = 'blue'
+
+        elemento2 = document.getElementsByTagName('li')[3]
+        elemento2.style.color = 'green'
+        // Mudando o conteúdo do li
+        elemento2.innerText = "Spring-boot"
+
+        // Acessando elemento pelo id
+        elementoDiv = document.getElementById("conteudo")
+
+        // Colocando um HTML dentro da minha div
+        elementoDiv.innerHTML = "<p> Estou colocando um paragrafo como teste </p>"
+
+        // Utilizando o document.getElementByName
+        elementoDivName = document.getElementsByName("divconteudo")[1]
+        elementoDivName.style.color = 'blue'
+        // Caso eu coloque a tag "<p></p> ela ira aparecer junto ao texto, pois não estou utilizando INNERHTML"
+        elementoDivName.innerText = "Estou colocando um texto que é diferente de utilizar o innerHTML"
+
+        // Selecionando elemento pela classe e utilizando o document.getElementByClassName
+        // Aqui dentro eu tenho um array
+          elementoDivClass = document.getElementsByClassName('mensagem')[1]
+        elementoDivClass.innerText = "Testando o ByClassName com a div na posição 1 do array"
+
+        elementoDivClass = document.getElementsByClassName('mensagem')[2]
+        elementoDivClass.innerText = "Testando o ByClassName"
+
+
+        // UTILIZANDO O SELETOR CSS
+        elementoSpanClass = document.querySelector("span.novo")  // Aqui estou colocando o meu elemento que é um span e a classe dele que é novo
+        // Realizando a manipulação
+        elementoSpanClass.style.color = "brown"
+       // Alterando o background
+        elementoSpanClass.style.background = 'yellow'
+
+        // Vou pegar todo mundo que tem a classe = " mensagem "
+        todosElementos = document.querySelectorAll(".mensagem")[3]
+        todosElementos.innerText = "Testando o  querySelectorAll"
+        todosElementos.style.background = 'yellow'
+        
+
+
+
+    </script>
+
+</html>

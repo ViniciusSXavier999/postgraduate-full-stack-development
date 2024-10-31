@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <div class="estilo">
+        div com estilo
+    </div>
+
+    <div class="estilo">
+        div com estilo 2
+    </div>
+    
+    <div class="estilo">Elemento p com estilo</div>
+    <p>Isso é <span class="estilo">elemento span</span> dentro de um p</p>
+
+
+</body>
+
+<script>
+    /* Com base no HTML a seguir coloque todos os elementos que tem a class estilo com fundo azul, letra branca e todas as letras em maisculo */
+
+    // selecionando todos os elementos com a class "estilo"
+    element = document.querySelectorAll(".estilo")
+
+   for (var i = 0; i < element.length; i++){
+    /* o i começa valendo 0, ele vai ir realizando todas ações que eu pedi até ele voltar para a condição e verificar se i continua sendo maior que o meu array element */
+        element[i].style.background = "blue"
+        element[i].style.color = 'white'
+        element[i].innerText = element[i].innerText.toUpperCase()
+   }
+
+
+</script>
+
+</html>
+
+
+
+
