@@ -38,10 +38,10 @@ Outras formas de acessar esses elementos são através dos:
 
 ```jsx
 // a partir de agora teremos um array de li
-var variasLi = document.getElementByTagName("li");
+var variasLi = document.getElementsByTagName("li");
 
 // para pegar a primeiira li
-var primeira = document.getElementByTagName("li")[0]
+var primeira = document.getElementsByTagName("li")[0]
 ```
 
 > Depois que temos o elemento podemos fazer qualquer coisa com ele, Por exemplo, trocar o valor dele ou trocar a cor dele.
