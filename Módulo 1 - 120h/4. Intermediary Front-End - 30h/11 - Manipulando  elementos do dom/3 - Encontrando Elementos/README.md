@@ -49,27 +49,16 @@ var primeira = document.getElementsByTagName("li")[0]
 
 ---
 
-<img src="/icons/code_blue.svg" alt="/icons/code_blue.svg" width="40px" />
+
 
 `innerText` → No JavaScript, o innerText é uma propriedade que **retorna o conteúdo textual de um nó e seus descendentes, ignorando as tags HTML**. O innerText é usado para obter o texto visível de um elemento, como se o usuário tivesse selecionado o conteúdo e copiado para a área de transferência. 
 
-
-<img src="/icons/code_blue.svg" alt="/icons/code_blue.svg" width="40px" />
-
 `getElementById` → O getElementById **é uma função do JavaScript que retorna um elemento do DOM, identificado por um ID específico**
-
-
-<img src="/icons/code_blue.svg" alt="/icons/code_blue.svg" width="40px" />
 
 `innerHTML` → O innerHTML **pode ser usado para receber o conteúdo de um elemento HTML ou para definir um novo conteúdo para ele**.
 
-
-<img src="/icons/code_blue.svg" alt="/icons/code_blue.svg" width="40px" />
-
  `document.getElementsByName()` → O `document.getElementsByName()` **é um método do JavaScript que seleciona todos os elementos do DOM com um determinado atributo de nome**. Ele retorna um objeto NodeList, que é semelhante a um array, contendo todos os elementos selecionados
 
-
-<img src="/icons/code_yellow.svg" alt="/icons/code_yellow.svg" width="40px" />
 
 Outra maneira de estar  fazendo essas manipulações é através de seletores CSS
 
@@ -78,13 +67,10 @@ Outra maneira de estar  fazendo essas manipulações é através de seletores CS
 O querySelector é vantajoso em relação ao getElementById, pois permite utilizar seletores CSS, o que possibilita uma seleção mais precisa e avançada.
 
 
-<img src="/icons/code_yellow.svg" alt="/icons/code_yellow.svg" width="40px" />
-
 `document.querySelector()` → Retorna uma lista de elementos presentes no documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que coincidam com o grupo de seletores especificado.
 
 ---
 
-<img src="/icons/cloud-yes_yellow.svg" alt="/icons/cloud-yes_yellow.svg" width="40px" />
 
 > Quando temos um “S” no elementS quer dizer que teremos um array.
 > 
