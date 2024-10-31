@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elemento dinamicamente, exemplo DOM.</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // Dentro do meu script, eu vou criar uma div que será introduzida la no HTML
+    var elemento = document.createElement("div")
+
+    // Inserindo um texto na div
+    elemento.innerText = "Utilizando o createElement para criar uma div"
+
+    // alterando o background
+    elemento.style.background = "yellow"
+
+    // adicionando essa div no meu HTML
+    document.body.append(elemento)
+</script>
+
+</html>

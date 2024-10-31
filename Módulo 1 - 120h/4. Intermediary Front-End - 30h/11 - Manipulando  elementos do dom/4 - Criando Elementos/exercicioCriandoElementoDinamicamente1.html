@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando a criação de elementos dinamicamente através do Javascript</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Java</li>
+    </ul>
+</body>
+
+<script>
+    /* Crie uma lista e adicione elementos dentro dessa lista */
+    
+    // Acessando a ul
+    var lista = document.getElementById("lista")
+
+    // criando a li
+    var li = document.createElement("li")
+    // Adicionando valores a li
+    li.textContent = "Quem somos"
+
+    lista.appendChild(li)
+</script>
+
+</html>
