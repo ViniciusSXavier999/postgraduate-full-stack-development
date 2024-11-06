@@ -10,7 +10,7 @@ a Objetos; 💥
 - Herança; 💥
 - Polimorfismo; 💥
 - Collections. 💥
-<img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Microcertificado%20-%20L%C3%B3gica%20de%20Programa%C3%A7%C3%A3o%20com%20Java.png" />
+<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Microcertificado%20-%20L%C3%B3gica%20de%20Programa%C3%A7%C3%A3o%20com%20Java.png" />
 
 ## Practitioner Front-End - 30H ☕️✅
 - Preparando o ambiente de desenvolvimento; 💥
@@ -22,7 +22,22 @@ a Objetos; 💥
 - CSS II: Criando estilos; 💥
 - Introdução ao BootStrap. 💥
 - Avançando com bootStrap 💥
-<img width="500" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Microcertificado%20-%20Practitioner%20Front-End.png" />
+<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Microcertificado%20-%20Practitioner%20Front-End.png" />
+
+## Intermediary Front-End - 30H ☕️✅
+- Preparando o ambiente de desenvolvimento 💥
+- Programação com Javascript - Conceitos; 💥
+- Tipos de Dados e operadores; 💥
+- Praticando soluções com operadores; 💥
+- String; 💥
+- if, switch, for, while; 💥
+- Arrays; 💥
+- Utilizando Arrays; 💥
+- Funções; 💥
+- Classes; 💥
+- Manipulando elementos do DOM; 💥
+- Primeiros Passos - Projeto Carrinho de compras 💥
+<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Microcertificado%20-%20Intermediary%20Front-End.png" />
 
 
 ### postgraduate-full-stack-development
