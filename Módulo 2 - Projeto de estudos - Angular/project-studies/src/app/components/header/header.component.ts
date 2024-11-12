@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { HomeComponent } from '../../pages/home/home.component';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,16 @@ import { HomeComponent } from '../../pages/home/home.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+
+export class HeaderComponent implements OnInit {
+
+  constructor() {
+  }
+
+  @Input() nome:string = ''
+
+  ngOnInit(): void {
+      
+  }
 
 }
