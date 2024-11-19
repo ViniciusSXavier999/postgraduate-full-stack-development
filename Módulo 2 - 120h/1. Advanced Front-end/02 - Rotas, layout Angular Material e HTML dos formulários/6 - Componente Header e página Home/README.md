@@ -16,12 +16,12 @@ Esse componente vai ser responsável por ter o router-outlet e também vai ter u
 
 ### Component HOME
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Homecomponent.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Homecomponent.png" />
 
 ### Component LOGIN
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/LoginComponent.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/LoginComponent.png" />
 
 ### Component CADASTRO
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CadastroComponent.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CadastroComponent.png" />
