@@ -39,11 +39,11 @@ O sessionStorage **é um recurso da API de Armazenamento da Web (Web Storage AP
 > 
 > VAMOS SUPOR QUE EU TENHA UMA LISTA DE USUÁRIOS (um ARRAY de objeto de usuários)
 > 
-> ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ba112f0-ff9f-452b-90da-b97c8122eae6/fba1ea61-981f-42a1-a62c-32c3b1626965/image.png)
+> <img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/observable1.png />
 > 
 > SE ao invés de firstName(que é como está no meu arquivo json) vir só “name” o Observable vai validar e vai dar um erro no console, ele é uma função do Javascrit que você fica observando ele se está vindo corretamente, (eu mando a informação, recebo essa informação e valido ela.)
 > 
-> ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3ba112f0-ff9f-452b-90da-b97c8122eae6/404aabf0-e42f-4b2d-a642-fdc3b4f364be/image.png)
+> <img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/observable2.png />
 > 
 
 Podemos observar o nome do atributo igual o da classe typescript.
