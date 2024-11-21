@@ -1,5 +1,7 @@
 # SERVICES PARA FAKE API
 
+
+
 🏆 Esse código serve para fazer uma comunicação com qualquer API de qualquer linguagem, mas nesse caso estou fazendo a comunicação via JSON-SERVER com a minha fake API
 
 
@@ -39,11 +41,11 @@ O sessionStorage **é um recurso da API de Armazenamento da Web (Web Storage AP
 > 
 > VAMOS SUPOR QUE EU TENHA UMA LISTA DE USUÁRIOS (um ARRAY de objeto de usuários)
 > 
-> <img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/observable1.png />
+> <img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/observable1.png"/>
 > 
 > SE ao invés de firstName(que é como está no meu arquivo json) vir só “name” o Observable vai validar e vai dar um erro no console, ele é uma função do Javascrit que você fica observando ele se está vindo corretamente, (eu mando a informação, recebo essa informação e valido ela.)
 > 
-> <img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/observable2.png />
+> <img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/observable2.png" />
 > 
 
 Podemos observar o nome do atributo igual o da classe typescript.
