@@ -22,7 +22,7 @@ chidren → Signica criança em inglês, é a partir dele que serão criadas as 
 
 ---
 
-## O QUE É A TAG <ROUTER-OUTLET>
+## O QUE É A TAG ROUTER-OUTLET
 
 A tag `<router-outlet>` **é uma diretiva do Angular que indica para onde o Angular deve direcionar.**
 
