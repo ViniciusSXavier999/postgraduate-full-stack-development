@@ -120,11 +120,11 @@ export class AutorizacaoService {
 - A partir do momento que a gente entra na rota privada, ele vai verificar se está logado ou não, e vai autorizar ou não
 - ELE VAI FAZER A VERIFICAÇÃO LÁ DENTRO DO AUTORIZADOGUARD
 
-<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard1.png />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard1.png "/>
 
 - SE ele tiver passado pelo AutorizadoGuard, ai ele vai entrar no arquivo service e realizar as funções que estão dentro dele
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard2.png />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard2.png "/>
 
 - Após entrar no service ele vai setar login como “sim” e vai setar o flag para true lá no Autorizadoguard
 
@@ -255,7 +255,7 @@ Um a gente permite a injeção e o outro a gente de fato realiza a injeção.
 
 ## MÉTODO NAVIGATE()
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard3.png />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard3.png "/>
 
 📌 O método navigate() do Angular **é utilizado para fazer a navegação entre páginas de uma aplicação por meio de código**
 
@@ -270,7 +270,7 @@ Um a gente permite a injeção e o outro a gente de fato realiza a injeção.
 
 ## O QUE É OS MÉTODOS LOCALSTORAGE NO ANGULAR?
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard4png.png />
+<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/guard4png.png " />
 
 📌 O Local Storage **é uma área de armazenamento no navegador do usuário que persiste dados mesmo após o fechamento do navegador, os dados são sempre salvos em formato de string**. É ideal para armazenar dados que precisam ser mantidos por longos períodos, como preferências do usuário ou temas.
 
