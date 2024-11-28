@@ -71,17 +71,17 @@ AGORA VOU REALIZAR O TESTE DA APLICAÇÃO
 localhost:4200/login
 ```
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas1.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas1.png" />
 
 > Após isso, vou clicar em “Entrar” e vai aparecer o alert na tela
 > 
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas2.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas2.png" />
 
 > Após isso, se eu tentar entrar na rota ‘private’ novamente, ele vai liberar
 > 
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas3.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas3.png" />
 
 ---
 
@@ -137,11 +137,13 @@ export class DetalheComponent implements OnInit{
 
 ## 3. APÓS ISSO, VOU UTILIZAR O DATABIND PARA PASSAR INFORMAÇÕES PARA O HTML DO COMPONETE DETALHE
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/Microcertificado%20-%20L%C3%B3gica%20de%20Programa%C3%A7%C3%A3o%20com%20Java.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas4.png" />
 
 ## 4. EM SEGUIDA, VOU PARA MEU COMPONENTE MANIPULANDO-JSON.HTML E VOU ADICIONAR MAIS UM TD NA TABELA
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas4.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas5.png" />
+
+
 
 ## 5. LOGO APÓS, VOU CRIAR ESSE MÉTODO NO MANIPULANDO-JSON.COMPONENT.TS
 
@@ -167,11 +169,11 @@ ng serve
 http://localhost:4200/json
 ```
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas6.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas6.png" />
 
 ## 3. CLICAR NOS BOTÕES DE ‘IR PARA DETALHE’ QUE DINAMICAMENTE VAI SER ALTERADO O ID NA URL E VAMOS SER REDIRECIONADOS PARA ROTA DO COMPONENTE DETALHE
 
-<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas7.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas7.png" />
 
 ---
 
@@ -180,7 +182,7 @@ http://localhost:4200/json
 > Adicionamos a rota detalhe/:id, após o id podemos passar mais quantas informações desejarmos para serem passadas via url
 > 
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas8.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/dadosEntreRotas8.png" />
 
 > É possível passar objetos também, porem serializados
 > 
