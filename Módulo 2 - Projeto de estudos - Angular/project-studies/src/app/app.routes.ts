@@ -9,6 +9,7 @@ import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { Page2Component } from './pages/sub-route/page2/page2.component';
 import { PrivateComponent } from './pages/private/private.component';
 import { AutorizadoGuard } from './guards/autorizado.guard';
+import { DetalheComponent } from './pages/detalhe/detalhe.component';
 
 
 export const routes: Routes = [
@@ -23,6 +24,9 @@ export const routes: Routes = [
     {path: 'cadastroo', component: CadastroComponent},
 
     {path: 'login', component: LoginComponent},
+
+    // Eu tenho a rota e uma informação que eu quero passar
+    {path: 'detalhe/:id', component: DetalheComponent},
 
     {path: 'json', component: ManipulandoJsonComponent},
 
