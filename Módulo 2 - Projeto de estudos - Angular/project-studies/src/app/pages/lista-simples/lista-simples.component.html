@@ -1,0 +1,25 @@
+<h2>MANIPULANDO LISTA SIMPLES DE USUÁRIO</h2>
+
+<div class="container">
+    <h1>Lista de Estudantes</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Vamos acessar todos os dados daquele json e vamos varrer ele para mostrar na tela através do for -->
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td><button mat-button (click)="goToDetail(user)">Ir para detalhe</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
