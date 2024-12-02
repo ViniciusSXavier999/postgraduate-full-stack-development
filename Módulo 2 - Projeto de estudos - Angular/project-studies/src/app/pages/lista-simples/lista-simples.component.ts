@@ -3,11 +3,12 @@ import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-lista-simples',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButton],
   templateUrl: './lista-simples.component.html',
   styleUrl: './lista-simples.component.css'
 })
@@ -22,9 +23,12 @@ export class ListaSimplesComponent implements OnInit {
 
   ngOnInit(): void {
     // Estou chamando meu método buscaUser
+
+    /* AQUI ESTOU CHAMANDO MEU METODO QUE TRARA TODOS OS DADOS PARA MIM APÓS A RENDERIZAÇÃO DA PAGINA */
     this.buscaUser()
   }
 
+  // Através desse método estou me inscrevendo nele através do subscribe e retornando next ou error que são funcionanlidades do subscribe
   buscaUser(): void {
 
     this.service.getUsers().subscribe(
@@ -35,9 +39,9 @@ export class ListaSimplesComponent implements OnInit {
         },
 
         // Criação de exceção simples
-        error: (erro: any) => {
+        error: (erroo: any) => {
           console.log('ocorreu algum erro')
-          console.log(erro)
+          console.log(erroo)
         }
       }
     )
@@ -45,7 +49,7 @@ export class ListaSimplesComponent implements OnInit {
 
   // Vamos passar mais de uma informação na rota
   goToDetail(user: User){
-    this.router.navigate(['detalhe', user.id])
+    this.router.navigate(['detalhe', user.id, user.phone]) // vamos passar esses dois dados na rota
   }
 
 

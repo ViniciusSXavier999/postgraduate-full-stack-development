@@ -10,6 +10,7 @@ import { Page2Component } from './pages/sub-route/page2/page2.component';
 import { PrivateComponent } from './pages/private/private.component';
 import { AutorizadoGuard } from './guards/autorizado.guard';
 import { DetalheComponent } from './pages/detalhe/detalhe.component';
+import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 
 
 export const routes: Routes = [
@@ -21,12 +22,14 @@ export const routes: Routes = [
     
     {path:'listar', component: ListarComponent},
 
+    {path:'listar-simples', component: ListaSimplesComponent}, // adicionando a rota da minha lista-simples
+
     {path: 'cadastroo', component: CadastroComponent},
 
     {path: 'login', component: LoginComponent},
 
-    // Eu tenho a rota e uma informação que eu quero passar
-    {path: 'detalhe/:id', component: DetalheComponent},
+    // Passando mais de duas informações na rota
+    {path: 'detalhe/:idd/:phone', component: DetalheComponent},
 
     {path: 'json', component: ManipulandoJsonComponent},
 
