@@ -27,20 +27,16 @@ export class CadastroComponent {
 
 
   addressForm = this.fb.group({
-    id: '',
-    company: null,
-    firstName: [null, Validators.required],
+    /* na nossa regra de negócio o nome vai ter no minimo 2 letras e no max 70 letras */
+    firstName: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
     email: [null, Validators.required],
     phone: [null, Validators.required],
-
     /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
     password: [null, Validators.required]
   });
 
-  hasUnitNumber = false;
-
-
+  
   onSubmit(): void {
-    alert('Thanks!');
+    alert('Entrou no onSubmit');
   }
 }
