@@ -12,8 +12,8 @@
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Email" formControlName="email">
-            @if (addressForm.controls['email'].hasError('required')) {
-            <mat-error>Email é<strong> obrigatório</strong></mat-error>
+            @if (email.invalid) {
+            <mat-error>{{getErrorMessage()}}</mat-error> <!-- A expressão completa exibe o <mat-error> somente se o campo email for inválido e tocado. -->
             }
           </mat-form-field>
         </div>
