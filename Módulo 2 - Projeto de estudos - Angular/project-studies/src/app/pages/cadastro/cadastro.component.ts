@@ -33,6 +33,11 @@ export class CadastroComponent {
   addressForm = this.fb.group({
     /* na nossa regra de negócio o nome vai ter no minimo 2 letras e no max 70 letras */
     firstName: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+
+    // APENAS TESTE PARA VER OS TIPOS DE VALIDAÇÕES
+    desc: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+
+    
     email: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
     ],
