@@ -1,0 +1,46 @@
+.full-width {
+    width: 100%;
+  }
+  
+  .shipping-card {
+    min-width: 120px;
+    margin: 20px auto;
+  }
+  
+  .form-container {
+    display: flex;               /* Habilita o Flexbox */
+    justify-content: center;     /* Centraliza o conteúdo horizontalmente */
+    align-items: center;         /* Centraliza o conteúdo verticalmente */
+    height: 100vh;              /* A altura ocupa toda a altura da janela */
+    
+  
+  
+  }
+  
+  .form {
+  width: 500px;                /* Largura do formulário */
+  padding: 50px;               /* Preenchimento interno */
+  border: 1px solid #dadada;      /* Borda opcional */
+  background-color: white;     /* Cor de fundo do formulário */
+  }
+  
+  
+  .mat-radio-button {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .col:last-child {
+    margin-right: 0;
+  }
+  

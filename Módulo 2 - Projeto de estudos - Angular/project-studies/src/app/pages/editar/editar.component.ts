@@ -8,11 +8,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { User } from '../../models/user';
 
-
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrl: './cadastro.component.css',
+  selector: 'app-editar',
   standalone: true,
   imports: [
     MatInputModule,
@@ -21,28 +18,42 @@ import { User } from '../../models/user';
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule
-  ]
+  ],
+  templateUrl: './editar.component.html',
+  styleUrl: './editar.component.css'
 })
-export class CadastroComponent {
-
-  user: User = new User
+export class EditarComponent {
 
   // DENTRO DO FORMBUILDER TEMOS OS VALORES DOS DADOS
   private fb = inject(FormBuilder);
-
-  addressForm = this.fb.group({
-    /* na nossa regra de negócio o nome vai ter no minimo 2 letras e no max 70 letras */
-    firstName: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
-    email: [null, Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
-    ],
-    phone: [null, Validators.required],
-    /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
-    password: [null, Validators.required]
-  });
-
+  user: User = new User();
+  addressForm:any
+  email: any
   
-  email = this.addressForm.controls['email']
+  constructor(){
+
+    // PEGANDO O OBJETO
+    if(localStorage.getItem('user')){
+        // desserializando o objeto
+        this.user = JSON.parse(localStorage.getItem('user') || '{}')
+    }
+    this.addressForm = this.fb.group({
+      /* na nossa regra de negócio o nome vai ter no minimo 2 letras e no max 70 letras */
+      // Ao inves de 'null' estamos dizendo que o formulario vai ter como dado de inicalização o valor que meu atributo do user receber
+      firstName: [this.user.firstName, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+      email: [this.user.email, Validators.compose([
+        Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
+      ],
+      phone: [this.user.phone, Validators.required],
+      /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
+      password: [null, Validators.required]
+    });
+
+     
+  this.email = this.addressForm.controls['email']
+
+  }
+
 
   getErrorMessagee() {
     if (this.email.hasError('required')) {
@@ -58,7 +69,8 @@ export class CadastroComponent {
     }
   }
 
-  
+   
+    
   onSubmit(): void {
     this.user.id = '1'
 
@@ -81,4 +93,5 @@ export class CadastroComponent {
     // gravando no local storage e serializando o objeto
     localStorage.setItem('user', JSON.stringify(this.user))
   }
+
 }

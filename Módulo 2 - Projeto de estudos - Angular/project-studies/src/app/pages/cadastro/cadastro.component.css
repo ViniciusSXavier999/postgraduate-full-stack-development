@@ -20,9 +20,10 @@
 .form {
 width: 500px;                /* Largura do formulário */
 padding: 50px;               /* Preenchimento interno */
-border: 1px solid #ccc;      /* Borda opcional */
+border: 1px solid #dadada;      /* Borda opcional */
 background-color: white;     /* Cor de fundo do formulário */
 }
+
 
 .mat-radio-button {
   display: block;

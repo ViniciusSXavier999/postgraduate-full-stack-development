@@ -24,7 +24,7 @@ export class DetalheComponent implements OnInit{
     // por que o forEach()? porque se você tiver mais de um parametro.
     // ele pode passar mais de um parametro
       this.route.params.forEach((params: Params)=>{ // Aqui temos um arrow function
-        if(params['idd'] !== undefined){ // O operador !== em JavaScript é um operador de comparação que verifica se dois valores são diferentes e retorna true se forem, ou false se forem iguais.
+        if(params['id'] !== undefined){ // O operador !== em JavaScript é um operador de comparação que verifica se dois valores são diferentes e retorna true se forem, ou false se forem iguais.
           this.identificador =+ params['idd']
           console.log(this.identificador)
         }

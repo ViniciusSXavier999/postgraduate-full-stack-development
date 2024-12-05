@@ -11,6 +11,7 @@ import { PrivateComponent } from './pages/private/private.component';
 import { AutorizadoGuard } from './guards/autorizado.guard';
 import { DetalheComponent } from './pages/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
+import { EditarComponent } from './pages/editar/editar.component';
 
 
 export const routes: Routes = [
@@ -28,8 +29,10 @@ export const routes: Routes = [
 
     {path: 'login', component: LoginComponent},
 
+    {path: 'editar', component: EditarComponent},
+
     // Passando mais de duas informações na rota
-    {path: 'detalhe/:idd/:phone', component: DetalheComponent},
+    {path: 'detalhe/:id/:phone', component: DetalheComponent},
 
     {path: 'json', component: ManipulandoJsonComponent},
 
