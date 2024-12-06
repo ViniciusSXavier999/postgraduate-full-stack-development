@@ -21,6 +21,9 @@
 
       <!-- NOVO CAMPO -->
 
+      <!-- 
+      
+      
       <div class="row">
 
         <div class="col">
@@ -34,6 +37,10 @@
 
     
       </div>
+      
+      
+      -->
+      
 
       <div class="row ">
         <div class="col">
@@ -50,9 +57,20 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Telefone" formControlName="phone">
+            <input matInput placeholder="Telefone" mask="(00) 0000-0000"  formControlName="phone">
             @if (addressForm.controls['phone'].hasError('required')) {
             <mat-error>Telefone é <strong>obrigatório</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="CPF" mask="000.000.000-00"  formControlName="cpf">
+            @if (addressForm.controls['cpf'].hasError('required')) {
+            <mat-error>CPF é <strong>obrigatório</strong></mat-error>
             }
           </mat-form-field>
         </div>

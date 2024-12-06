@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { User } from '../../models/user';
+import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 
 
 @Component({
@@ -20,7 +21,8 @@ import { User } from '../../models/user';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskDirective, NgxMaskPipe,
   ]
 })
 export class CadastroComponent {
@@ -35,13 +37,14 @@ export class CadastroComponent {
     firstName: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
 
     // APENAS TESTE PARA VER OS TIPOS DE VALIDAÇÕES
-    desc: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+   // desc: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
 
     
     email: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
     ],
     phone: [null, Validators.required],
+    cpf: [null, Validators.required],
     /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
     password: [null, Validators.required]
   });
