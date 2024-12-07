@@ -40,7 +40,7 @@ export class EditarComponent {
     this.addressForm = this.fb.group({
       /* na nossa regra de negócio o nome vai ter no minimo 2 letras e no max 70 letras */
       // Ao inves de 'null' estamos dizendo que o formulario vai ter como dado de inicalização o valor que meu atributo do user receber
-      firstName: [this.user.firstName, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+      firstName: [this.user.name, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
       email: [this.user.email, Validators.compose([
         Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
       ],
@@ -76,7 +76,7 @@ export class EditarComponent {
 
     // Pegando os dados que meu usuário preencher no campo firstName e atribuindo a variavel do meu objeto user
     if(this.addressForm.controls['firstName'].value)
-      this.user.firstName = this.addressForm.controls['firstName'].value
+      this.user.name = this.addressForm.controls['firstName'].value
 
     if(this.addressForm.controls['email'].value)
       this.user.email = this.addressForm.controls['email'].value

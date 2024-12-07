@@ -2,7 +2,7 @@
 
 export class User {
     public id: String = ''
-    public firstName: String = ''
+    public name: String = ''
     public phone: String = ''
     public email: String = ''
     public cpf: String = ''

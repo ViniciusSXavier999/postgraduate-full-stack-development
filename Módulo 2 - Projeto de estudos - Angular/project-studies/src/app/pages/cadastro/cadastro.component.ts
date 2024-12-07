@@ -35,7 +35,7 @@ export class CadastroComponent {
 
   addressForm = this.fb.group({
     /* na nossa regra de negócio o nome vai ter no minimo 2 letras e no max 70 letras */
-    firstName: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+    name: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
 
     // APENAS TESTE PARA VER OS TIPOS DE VALIDAÇÕES
    // desc: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
@@ -74,8 +74,8 @@ export class CadastroComponent {
     this.user.id = '1'
 
     // Pegando os dados que meu usuário preencher no campo firstName e atribuindo a variavel do meu objeto user
-    if(this.addressForm.controls['firstName'].value)
-      this.user.firstName = this.addressForm.controls['firstName'].value
+    if(this.addressForm.controls['name'].value)
+      this.user.name = this.addressForm.controls['name'].value
 
     if(this.addressForm.controls['email'].value)
       this.user.email = this.addressForm.controls['email'].value
@@ -90,6 +90,6 @@ export class CadastroComponent {
     console.log(this.user)
 
     // gravando no local storage e serializando o objeto
-    localStorage.setItem('user', JSON.stringify(this.user))
+   // localStorage.setItem('user', JSON.stringify(this.user))
   }
 }
