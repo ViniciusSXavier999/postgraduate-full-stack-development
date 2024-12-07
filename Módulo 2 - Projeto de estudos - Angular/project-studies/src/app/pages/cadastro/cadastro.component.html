@@ -72,9 +72,31 @@
             @if (addressForm.controls['cpf'].hasError('required')) {
             <mat-error>CPF é <strong>obrigatório</strong></mat-error>
             }
+
+            <!-- Se após a função de validação ele retornar cpfNotValid, será escrito na tela "CPF NÃO É VALIDO" -->
+            @if (addressForm.controls['cpf'].getError('cpfNotValid')) {
+              <mat-error>CPF não é <strong>valido</strong></mat-error>
+              }
           </mat-form-field>
         </div>
       </div>
+
+      <!--
+      
+      
+        <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="CNPJ" mask="000.000.000-00"  formControlName="CNPJ">
+            @if (addressForm.controls['CNPJ'].hasError('required')) {
+            <mat-error>CNPJ é <strong>obrigatório</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      
+      
+      -->
 
       <div class="col">
         <mat-form-field class="full-width">

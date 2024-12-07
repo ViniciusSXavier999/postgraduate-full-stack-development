@@ -8,6 +8,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { User } from '../../models/user';
 import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
+import { GenericValidator } from '../../rulesCPF&CNPJ/validador';
 
 
 @Component({
@@ -44,7 +45,9 @@ export class CadastroComponent {
       Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
     ],
     phone: [null, Validators.required],
-    cpf: [null, Validators.required],
+
+    cpf:  [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
+  ],
     /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
     password: [null, Validators.required]
   });
