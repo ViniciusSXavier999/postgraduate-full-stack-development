@@ -7,6 +7,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { AutorizacaoService } from './services/autorizacao.service';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { UserService } from './services/user.service';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 
 
@@ -15,6 +16,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideEnvironmentNgxMask(),
-    UserService
+    UserService,
+    provideNativeDateAdapter()
   ]
 };

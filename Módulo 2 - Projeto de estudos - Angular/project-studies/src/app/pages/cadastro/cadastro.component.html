@@ -40,24 +40,25 @@
       
       
       -->
-      
+
 
       <div class="row ">
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Email" formControlName="email">
             @if (email.invalid) {
-            <mat-error>{{getErrorMessagee()}}</mat-error> <!-- A expressão completa exibe o <mat-error> somente se o campo email for inválido e tocado. -->
+            <mat-error>{{getErrorMessagee()}}</mat-error>
+            <!-- A expressão completa exibe o <mat-error> somente se o campo email for inválido e tocado. -->
             }
           </mat-form-field>
         </div>
       </div>
-      
+
 
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Telefone" mask="(00) 0000-0000"  formControlName="phone">
+            <input matInput placeholder="Telefone" mask="(00) 0000-0000" formControlName="phone">
             @if (addressForm.controls['phone'].hasError('required')) {
             <mat-error>Telefone é <strong>obrigatório</strong></mat-error>
             }
@@ -68,18 +69,31 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="CPF" mask="000.000.000-00"  formControlName="cpf">
+            <input matInput placeholder="CPF" mask="000.000.000-00" formControlName="cpf">
             @if (addressForm.controls['cpf'].hasError('required')) {
             <mat-error>CPF é <strong>obrigatório</strong></mat-error>
             }
 
             <!-- Se após a função de validação ele retornar cpfNotValid, será escrito na tela "CPF NÃO É VALIDO" -->
             @if (addressForm.controls['cpf'].getError('cpfNotValid')) {
-              <mat-error>CPF não é <strong>valido</strong></mat-error>
-              }
+            <mat-error>CPF não é <strong>valido</strong></mat-error>
+            }
           </mat-form-field>
         </div>
       </div>
+
+      <div class="row">
+
+        <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dataNascimento">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+
 
       <!--
       
@@ -111,7 +125,7 @@
     <mat-card-actions>
 
       <!-- quando o usuário clicar nesse botão, ele irá executar um submit desse formulario para a função que está la no typescript-->
-      <button mat-raised-button  color="primary" type="submit" [disabled]="!addressForm.valid" >Cadastrar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!addressForm.valid">Cadastrar</button>
     </mat-card-actions>
   </mat-card>
 </form>

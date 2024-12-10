@@ -38,6 +38,7 @@ background-color: white;     /* Cor de fundo do formulário */
 .col {
   flex: 1;
   margin-right: 20px;
+  padding-top: 20px;
 }
 
 .col:last-child {

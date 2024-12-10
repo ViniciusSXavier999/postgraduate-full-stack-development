@@ -10,6 +10,9 @@ import { User } from '../../models/user';
 import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 import { GenericValidator } from '../../rulesCPF&CNPJ/validador';
 import { UserService } from '../../services/user.service';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @Component({
@@ -25,6 +28,10 @@ import { UserService } from '../../services/user.service';
     MatCardModule,
     ReactiveFormsModule,
     NgxMaskDirective, 
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatDatepickerModule
+   
   ]
 })
 export class CadastroComponent {
@@ -49,6 +56,8 @@ export class CadastroComponent {
       Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
     ],
     phone: [null, Validators.required],
+
+    dataNascimento: [null, Validators.required],
 
     cpf:  [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
   ],
