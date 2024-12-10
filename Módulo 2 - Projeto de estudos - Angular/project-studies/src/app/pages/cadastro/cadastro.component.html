@@ -11,8 +11,8 @@
 
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Nome" formControlName="name">
-            @if (addressForm.controls['name'].hasError('required')) {
+            <input matInput placeholder="Nome" formControlName="firstName">
+            @if (addressForm.controls['firstName'].hasError('required')) {
             <mat-error>Nome é <strong>obrigatório</strong></mat-error>
             }
           </mat-form-field>

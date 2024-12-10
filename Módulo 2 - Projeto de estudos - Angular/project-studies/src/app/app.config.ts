@@ -6,6 +6,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient } from '@angular/common/http';
 import { AutorizacaoService } from './services/autorizacao.service';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
+import { UserService } from './services/user.service';
 
 
 
@@ -14,5 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideEnvironmentNgxMask(),
+    UserService
   ]
 };

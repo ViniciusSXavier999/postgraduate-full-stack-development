@@ -15,7 +15,7 @@
             <!-- Vamos acessar todos os dados daquele json e vamos varrer ele para mostrar na tela através do for -->
             <tr *ngFor="let user of users">
                 <td>{{ user.id }}</td>
-                <td>{{ user.name }}</td>
+                <td>{{ user.firstName }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.phone }}</td>
                 <td><button mat-button (click)="goToDetail(user)">Ir para detalhes</button></td>
