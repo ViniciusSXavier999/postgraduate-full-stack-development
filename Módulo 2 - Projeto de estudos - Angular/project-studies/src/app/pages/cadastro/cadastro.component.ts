@@ -103,6 +103,9 @@ export class CadastroComponent {
     if(this.addressForm.controls['password'].value)
       this.user.password = this.addressForm.controls['password'].value
 
+    if(this.addressForm.controls['dataNascimento'].value)
+      this.user.dateBirth = this.addressForm.controls['dataNascimento'].value
+
    // alert('Você cadastrou');
     console.log(this.user)
 

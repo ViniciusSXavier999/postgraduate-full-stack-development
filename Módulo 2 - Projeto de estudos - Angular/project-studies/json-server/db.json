@@ -175,6 +175,15 @@
       "phone": "1111111111",
       "cpf": "47681967800",
       "password": "123"
+    },
+    {
+      "id": "e4e7",
+      "firstName": "Vini",
+      "email": "vini123@gmail.com",
+      "phone": "1111111111",
+      "cpf": "74636947800",
+      "password": "111",
+      "dateBirth": "2017-07-11T03:00:00.000Z"
     }
   ]
 }
