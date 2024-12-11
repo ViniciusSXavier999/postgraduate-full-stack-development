@@ -40,7 +40,7 @@ export class ListaSimplesComponent implements OnInit {
 
         // Criação de exceção simples
         error: (erroo: any) => {
-          console.log('ocorreu algum erro')
+          alert('ocorreu algum erro')
           console.log(erroo)
         }
       }

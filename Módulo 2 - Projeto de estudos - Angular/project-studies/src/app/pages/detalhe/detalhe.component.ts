@@ -25,7 +25,7 @@ export class DetalheComponent implements OnInit{
     // ele pode passar mais de um parametro
       this.route.params.forEach((params: Params)=>{ // Aqui temos um arrow function
         if(params['id'] !== undefined){ // O operador !== em JavaScript é um operador de comparação que verifica se dois valores são diferentes e retorna true se forem, ou false se forem iguais.
-          this.identificador =+ params['idd']
+          this.identificador =+ params['id']
           console.log(this.identificador)
         }
 
