@@ -22,12 +22,13 @@ export class ListarComponent implements AfterViewInit, OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<ListarItem>;
+//  @ViewChild(MatTable) table!: MatTable<ListarItem>;
+  @ViewChild(MatTable, {static: false}) table!: MatTable<User>
   dataSource = new MatTableDataSource<User> ([])
   // dataSource = new ListarDataSource();
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'firstName', 'email', 'phone', 'cpf'];
+  displayedColumns :string[] = ['id', 'firstName', 'email', 'phone', 'cpf'];
 
   ngOnInit(): void {
       this.buscaUsers()
@@ -39,6 +40,8 @@ export class ListarComponent implements AfterViewInit, OnInit {
       {
         next: (resposta) => {
           this.dataSource = new MatTableDataSource<User> (resposta)
+          this.dataSource.sort = this.sort
+          this.dataSource.paginator = this.paginator
         },
 
         // Criação de exceção simples
@@ -53,7 +56,7 @@ export class ListarComponent implements AfterViewInit, OnInit {
   ngAfterViewInit(): void {
    // this.dataSource.sort = this.sort;
    // this.dataSource.paginator = this.paginator;
-  //  this.table.dataSource = this.dataSource;
+    this.table.dataSource = this.dataSource;
   }
 }
 
