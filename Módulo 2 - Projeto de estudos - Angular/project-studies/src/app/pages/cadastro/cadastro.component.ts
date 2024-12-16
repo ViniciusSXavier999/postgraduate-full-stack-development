@@ -27,11 +27,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
-    NgxMaskDirective, 
-    MatFormFieldModule, 
-    MatInputModule, 
+    NgxMaskDirective,
+    MatFormFieldModule,
+    MatInputModule,
     MatDatepickerModule
-   
+
   ]
 })
 export class CadastroComponent {
@@ -49,9 +49,9 @@ export class CadastroComponent {
     firstName: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
 
     // APENAS TESTE PARA VER OS TIPOS DE VALIDAÇÕES
-   // desc: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
+    // desc: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(70)])],
 
-    
+
     email: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email])
     ],
@@ -59,13 +59,17 @@ export class CadastroComponent {
 
     dataNascimento: [null, Validators.required],
 
-    cpf:  [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
-  ],
+    cpf: [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
+    ],
+
+    cep: [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
+    ],
+
     /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
     password: [null, Validators.required]
   });
 
-  
+
   email = this.addressForm.controls['email']
 
   getErrorMessagee() {
@@ -82,47 +86,47 @@ export class CadastroComponent {
     }
   }
 
-  
+
   onSubmit(): void {
-    
+
     //  this.user.id = '1'
 
     // Pegando os dados que meu usuário preencher no campo firstName e atribuindo a variavel do meu objeto user
-    if(this.addressForm.controls['firstName'].value)
+    if (this.addressForm.controls['firstName'].value)
       this.user.firstName = this.addressForm.controls['firstName'].value
 
-    if(this.addressForm.controls['email'].value)
+    if (this.addressForm.controls['email'].value)
       this.user.email = this.addressForm.controls['email'].value
 
-    if(this.addressForm.controls['phone'].value)
+    if (this.addressForm.controls['phone'].value)
       this.user.phone = this.addressForm.controls['phone'].value
 
-    if(this.addressForm.controls['cpf'].value)
+    if (this.addressForm.controls['cpf'].value)
       this.user.cpf = this.addressForm.controls['cpf'].value
 
-    if(this.addressForm.controls['password'].value)
+    if (this.addressForm.controls['password'].value)
       this.user.password = this.addressForm.controls['password'].value
 
-    if(this.addressForm.controls['dataNascimento'].value)
+    if (this.addressForm.controls['dataNascimento'].value)
       this.user.dateBirth = this.addressForm.controls['dataNascimento'].value
 
-   // alert('Você cadastrou');
+    // alert('Você cadastrou');
     console.log(this.user)
 
     // gravando no local storage e serializando o objeto
-   // localStorage.setItem('user', JSON.stringify(this.user))
+    // localStorage.setItem('user', JSON.stringify(this.user))
 
-   // ADICIONANDO DADOS NA API DO JSON-SERVER db.json
+    // ADICIONANDO DADOS NA API DO JSON-SERVER db.json
 
-   this.service.addUser(this.user).subscribe({  // O SUBSCRIBE É OBRIGÁTORIO EM UM OBSERVABLE
-    next: (response) => {
-      console.log(response)
-      alert('Dado registrado com sucesso')
-    },
-    error: (erro: any) => { // error -> Tratamento de exceção do subscribe
-      console.log(erro)
-      alert('Ocorreu algum erro')
-    }
-   })   
+    this.service.addUser(this.user).subscribe({  // O SUBSCRIBE É OBRIGÁTORIO EM UM OBSERVABLE
+      next: (response) => {
+        console.log(response)
+        alert('Dado registrado com sucesso')
+      },
+      error: (erro: any) => { // error -> Tratamento de exceção do subscribe
+        console.log(erro)
+        alert('Ocorreu algum erro')
+      }
+    })
   }
 }
