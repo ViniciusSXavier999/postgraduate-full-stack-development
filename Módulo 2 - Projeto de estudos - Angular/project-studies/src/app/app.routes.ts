@@ -51,5 +51,10 @@ export const routes: Routes = [
     {path: 'private', component: PrivateComponent,
         canActivate: [AutorizadoGuard]
     },
+
+    {
+        path: 'lazy-component',
+        loadComponent: () => import('./pages/lazzy/lazzy.component').then(m => m.LazzyComponent)
+      }
         
 ];
