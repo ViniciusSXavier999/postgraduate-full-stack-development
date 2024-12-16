@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { AutorizacaoService } from '../../services/autorizacao.service';
+import { UserService } from '../../services/user.service';
 
 
 @Component({
@@ -27,6 +28,8 @@ export class LoginComponent {
   /* O private fb significa que você está criando uma propriedade privada chamada fb (abreviação de FormBuilder), que irá armazenar a instância do FormBuilder injetado */
   private fb = inject(FormBuilder);
   private autorizacaoService = inject(AutorizacaoService)
+
+  private service = inject(UserService)
 
   // ao invés de addressForm eu posso colocar o nome que eu quiser
 
@@ -58,6 +61,8 @@ export class LoginComponent {
   }
 
 
+  // essa função é responsável por fazer a verifição 
+  // ela vai estar sendo chamada no botãosubmit
   loginClick() {
     if (this.autorizacaoService.obterLoginStatus()) {
       this.autorizacaoService.deslogar()
@@ -66,7 +71,21 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    this.loginClick()
-    alert('Thanks!');
+    // this.loginClick()
+    if (this.autorizacaoService.obterLoginStatus()) {
+      this.autorizacaoService.deslogar()
+    } else {
+      //  this.autorizacaoService.autorizar();
+      this.service.login({ user: 'hahahah' }).subscribe({  // O SUBSCRIBE É OBRIGÁTORIO EM UM OBSERVABLE
+        next: (response) => {
+          //  console.log(response)
+          //  alert('Dado registrado com sucesso')
+        },
+        error: (erro: any) => { // error -> Tratamento de exceção do subscribe
+          console.log(erro)
+          alert('Ocorreu algum erro')
+        }
+      })
+    }
   }
 }

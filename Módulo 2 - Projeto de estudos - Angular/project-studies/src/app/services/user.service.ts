@@ -16,6 +16,7 @@ export class UserService {
 
   // url onde vou fazer a requisição
   BASE_URL: string = 'http://localhost:3000/';
+  FIREBASE_URL: string = ''
 
   // trazendo o HTTP para o service
   constructor(private segurancaHttp: HttpClient) { }
@@ -31,6 +32,10 @@ export class UserService {
   // MÉTODO GET
   getUsers(): Observable<User[]>{ // vai ser um array de usuários
     return this.segurancaHttp.get<User[]>(this.BASE_URL + 'users') // Aqui basicamente estou montando a URL e utilizando a concatenação
+  }
+
+  login(data:any): Observable<User>{
+    return this.segurancaHttp.post<User>(this.FIREBASE_URL + 'users', data, httpOptions)
   }
 
   // MÉTODO POST -> CRIAR FUNÇÃO PARA ADICIONAR USER 
