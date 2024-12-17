@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
+import { UserAuth } from '../models/userAuth';
 
 const httpOptions = {
 
@@ -16,7 +17,8 @@ export class UserService {
 
   // url onde vou fazer a requisição
   BASE_URL: string = 'http://localhost:3000/';
-  FIREBASE_URL: string = ''
+  TOKEN_FIREBASE: string =  'AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA'
+  FIREBASE_URL: string = 'https://identitytoolkit.googleapis.com/'
 
   // trazendo o HTTP para o service
   constructor(private segurancaHttp: HttpClient) { }
@@ -34,8 +36,9 @@ export class UserService {
     return this.segurancaHttp.get<User[]>(this.BASE_URL + 'users') // Aqui basicamente estou montando a URL e utilizando a concatenação
   }
 
-  login(data:any): Observable<User>{
-    return this.segurancaHttp.post<User>(this.FIREBASE_URL + 'users', data, httpOptions)
+  login(data:any): Observable<UserAuth>{
+    console.log(data)
+    return this.segurancaHttp.post<UserAuth>(this.FIREBASE_URL + 'v1/accounts:signInWithPassword?key=' + this.TOKEN_FIREBASE, data, httpOptions)
   }
 
   // MÉTODO POST -> CRIAR FUNÇÃO PARA ADICIONAR USER 

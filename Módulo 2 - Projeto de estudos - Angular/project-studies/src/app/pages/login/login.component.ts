@@ -78,7 +78,9 @@ export class LoginComponent {
       //  this.autorizacaoService.autorizar();
       this.service.login({ user: 'hahahah' }).subscribe({  // O SUBSCRIBE É OBRIGÁTORIO EM UM OBSERVABLE
         next: (response) => {
-          //  console.log(response)
+           console.log(response.idToken)
+           if(response.idToken)
+            this.autorizacaoService.autorizar()
           //  alert('Dado registrado com sucesso')
         },
         error: (erro: any) => { // error -> Tratamento de exceção do subscribe
