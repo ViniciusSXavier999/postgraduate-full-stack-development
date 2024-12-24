@@ -10,8 +10,9 @@ export class AutorizacaoService {
   constructor() { }
 
   // VAI CRIAR UMA FUNÇÃO PARA GRAVAR NO LOCALSTORAGE QUE ELE ESTÁ AUTORIZADO
-  autorizar(){
+  autorizar(token: string){
     localStorage.setItem("login", "sim");
+    localStorage.setItem("token", token);
   }
 
 

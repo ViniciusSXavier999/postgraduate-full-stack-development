@@ -184,6 +184,15 @@
       "cpf": "74636947800",
       "password": "111",
       "dateBirth": "2017-07-11T03:00:00.000Z"
+    },
+    {
+      "id": "0a39",
+      "firstName": "testando",
+      "email": "vini123@gmail.com",
+      "phone": "1111111111",
+      "cpf": "68887427844",
+      "password": "1234",
+      "dateBirth": "2017-01-11T02:00:00.000Z"
     }
   ]
 }

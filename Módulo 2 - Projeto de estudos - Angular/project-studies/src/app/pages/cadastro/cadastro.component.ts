@@ -62,8 +62,10 @@ export class CadastroComponent {
     cpf: [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
     ],
 
+    /*
     cep: [null, Validators.compose([Validators.required, GenericValidator.isValidCpf()])
     ],
+    */
 
     /* Se passarmos como "free" ele iria passar essa informação lá para o formulario dessa forma, mas não queremos desse jeito, por isso vamos colocar como "null" */
     password: [null, Validators.required]

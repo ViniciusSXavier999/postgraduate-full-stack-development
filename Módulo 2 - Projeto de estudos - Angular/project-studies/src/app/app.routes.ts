@@ -13,6 +13,7 @@ import { DetalheComponent } from './pages/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { ModalComponent } from './pages/modal/modal.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,8 @@ export const routes: Routes = [
     {path: 'detalhe/:id/:phone', component: DetalheComponent},
 
     {path: 'json', component: ManipulandoJsonComponent},
+
+    {path: 'usuario', component: UsuarioComponent},
 
     {path: 'subroute', component: SubRouteComponent,
 

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
 import { UserAuth } from '../models/userAuth';
+import { UserReturn } from '../models/userReturn';
 
 const httpOptions = {
 
@@ -16,13 +17,12 @@ const httpOptions = {
 export class UserService {
 
   // url onde vou fazer a requisição
-  BASE_URL: string = 'http://localhost:3000/';
-  TOKEN_FIREBASE: string =  'AIzaSyDThl5AbjP3GU4XvtdpBn5ZvVUFVXMJMSA'
-  FIREBASE_URL: string = 'https://identitytoolkit.googleapis.com/'
+ BASE_URL: string = 'http://localhost:3000/';
+ TOKEN_FIREBASE: string = 'AIzaSyAX06LYNcy0od0xCQkLPkXCXfLThK2oLv4' // minha chave da api key
+ FIREBASE_URL: string = 'https://identitytoolkit.googleapis.com/'
 
   // trazendo o HTTP para o service
   constructor(private segurancaHttp: HttpClient) { }
-
 
   // vou realizar o CRUD AGORA
 
@@ -36,10 +36,21 @@ export class UserService {
     return this.segurancaHttp.get<User[]>(this.BASE_URL + 'users') // Aqui basicamente estou montando a URL e utilizando a concatenação
   }
 
-  login(data:any): Observable<UserAuth>{
+  
+  login(data: any): Observable<UserAuth>{
     console.log(data)
-    return this.segurancaHttp.post<UserAuth>(this.FIREBASE_URL + 'v1/accounts:signInWithPassword?key=' + this.TOKEN_FIREBASE, data, httpOptions)
+    var url: string = this.FIREBASE_URL + 'v1/accounts:signInWithPassword?key=' + this.TOKEN_FIREBASE
+    console.log(url)
+    return this.segurancaHttp.post<UserAuth>(url, data, httpOptions)
   }
+
+  
+  getUserById(): Observable<UserReturn> {
+    let data = {idToken: localStorage.getItem('token') || ''}
+    var url: string = this.FIREBASE_URL + 'v1/accounts:lookup?key=' + this.TOKEN_FIREBASE;
+    return this.segurancaHttp.post<UserReturn>(url, data, httpOptions)
+  }
+  
 
   // MÉTODO POST -> CRIAR FUNÇÃO PARA ADICIONAR USER 
 
