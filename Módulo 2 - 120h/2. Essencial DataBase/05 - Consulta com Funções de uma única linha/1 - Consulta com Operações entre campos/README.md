@@ -31,10 +31,10 @@
 
 ## PRECEDÊNCIA DO OPERADOR
 
-- *
-- /
-- +
-- -
+ 1 -> * <br>
+ 2 -> / <br>
+ 3 -> + <br>
+ 4 -> - <br>
 
 <img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/consultaOPC4.png" />
 
@@ -272,7 +272,7 @@ SELECT ENAME, JOB, SAL, ENAME || ' TEM O CARGO DE ' || JOB || ' E GANHA ' || SAL
 SELECT JOB FROM SCOTT.EMP
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/consultaOPC29.png" />
+<img width="100" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/consultaOPC29.png" />
 
 ### CASO A GENTE QUEIRA EVITAR REPETIÇÕES VAMOS UTILIZAR A PALAVRA (CLÁUSULA) RESERVADA DISTINCT
 
@@ -284,4 +284,4 @@ SELECT JOB FROM SCOTT.EMP
 SELECT DISTINCT JOB FROM SCOTT.EMP
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/consultaOPC30.png" />
+<img width="100" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/consultaOPC30.png" />
