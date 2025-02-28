@@ -209,7 +209,7 @@ SELECT TO_CHAR(SYSDATE, 'DAY/YEAR') FROM DUAL
 SELECT ENAME, (SYSDATE-HIREDATE) DIAS, (SYSDATE-HIREDATE)/7 SEMANAS, (SYSDATE-HIREDATE)/ 365 ANOS, (SYSDATE-HIREDATE) * 24 FROM SCOTT.EMP;
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados18.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados18.png" />
 
 > Podemos notar que a visualização esta com muitas casas decimais, por isso podemos utilizar o TRUNC que corta todas as casas decimais (O ROUND ARREDONDA, ELE É DIFERENTE DO TRUNC)
 > 
@@ -218,7 +218,7 @@ SELECT ENAME, (SYSDATE-HIREDATE) DIAS, (SYSDATE-HIREDATE)/7 SEMANAS, (SYSDATE-HI
 > SELECT ENAME, TRUNC((SYSDATE-HIREDATE)) DIAS, TRUNC((SYSDATE-HIREDATE)/7) SEMANAS, TRUNC((SYSDATE-HIREDATE)/ 365) ANOS, TRUNC((SYSDATE-HIREDATE) * 24) HORAS FROM SCOTT.EMP;
 > ```
 > 
-> <img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados19.png" />
+> <img width="300" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados19.png" />
 > 
 
 ### MOSTRANDO O HIREDATE PARA CONFERIR SE ESTÁ TUDO CERTO COM OS CALCULOS
@@ -227,7 +227,7 @@ SELECT ENAME, (SYSDATE-HIREDATE) DIAS, (SYSDATE-HIREDATE)/7 SEMANAS, (SYSDATE-HI
 SELECT ENAME,HIREDATE, TRUNC((SYSDATE-HIREDATE)) DIAS, TRUNC((SYSDATE-HIREDATE)/7) SEMANAS, TRUNC((SYSDATE-HIREDATE)/ 365) ANOS, TRUNC((SYSDATE-HIREDATE) * 24) HORAS FROM SCOTT.EMP;
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados20.png" />
+<img width="300" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados20.png" />
 
 ### USANDO A FUNÇÃO TO_CHAR PARA TRABALHAR COM NÚMEROS
 
@@ -235,7 +235,7 @@ SELECT ENAME,HIREDATE, TRUNC((SYSDATE-HIREDATE)) DIAS, TRUNC((SYSDATE-HIREDATE)/
 SELECT ENAME, SAL, TO_CHAR(SAL, 'L999.999.999,99') FROM SCOTT.EMP
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados21.png" />
+<img width="300" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/convers%C3%A3oDados21.png" />
 
 ✅ O ‘L’ é responsável por colocar a moeda local, a nuvem está nos estados unidos, por isso a moeda local é o dollar
 
