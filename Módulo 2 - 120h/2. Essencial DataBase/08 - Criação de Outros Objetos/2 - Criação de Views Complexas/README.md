@@ -228,7 +228,7 @@ FROM scott.emp
 WHERE deptno=30
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/viewComplexas8.png" />
+<img width="300" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/viewComplexas8.png" />
 
 > Exclui os registros da view
 > 
@@ -239,7 +239,7 @@ DELETE salvu30
 
 🏆 Para termos privilegio de comandos DML devemos ir para MY SCHEMA
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/viewComplexas9.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/viewComplexas9.png" />
 
 > Foi necessário criar uma tabela que seja a cópia da scott.emp por conta dos privilégios.
 > 
@@ -250,4 +250,4 @@ DELETE salvu30
 > Estamos evitando que comandos DML faça alterações na view fazendo com que ela seja somente para leitura
 > 
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/viewComplexas10.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/viewComplexas10.png" />
