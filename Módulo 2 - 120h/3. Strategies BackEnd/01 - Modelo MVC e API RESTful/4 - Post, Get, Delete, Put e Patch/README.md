@@ -41,7 +41,7 @@ http://localhost:8080/estudantes?pagina=0&itensPorPagina=5
 > Recebemos a resposta no body, no formato JSON que é o padrão de troca de informações dessa API
 > 
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD1.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD1.png" />
 
 > O conteúdo é um array vazio e temos informações da página que a gente consultou.
 > 
@@ -70,7 +70,7 @@ Portanto, essa requisição está pedindo ao servidor para **adicionar um novo e
 http://localhost:8080/estudantes
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD2.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD2.png" />
 
 
 🏆 Esse é o corpo (body) da nossa requisição POST que será enviado ao servidor.
@@ -84,7 +84,7 @@ http://localhost:8080/estudantes
 
 ### RESPOSTA DA REQUISIÇÃO
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD3.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD3.png" />
 
 
 🏆 Podemos notar que foi respondida com um status diferente, que é o 201, ele é usado para criar recursos em uma API rest full
@@ -96,7 +96,7 @@ http://localhost:8080/estudantes
 ✅ Se executarmos novamente a requisição GET, ele vai retornar esse usuário estudante que acabamos de criar 
 
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD4.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD4.png" />
 
 
 ## MÉTODO DELETE
@@ -115,7 +115,7 @@ Essa requisição está pedindo ao servidor para **excluir o estudante de ID 1**
 http://localhost:8080/estudantes/1
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD5.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD5.png" />
 
 
 🏆 Notamos que o DELETE não retornou nenhum BODY, porém retornou o status 200, isso significa que o registro foi deletado do banco com sucesso.
@@ -137,7 +137,7 @@ O método **PUT** é idempotente, ou seja, enviar a mesma requisição várias v
 http://localhost:8080/estudantes/2
 ```
 
-<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD6.png" />
+<img width="800" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CRUD6.png" />
 
 
 > Após realizar o PUT e as informações estiverem corretas, o status será “OK” e podemos verificar as mudanças realizando o método GET e buscando todos os dados.
