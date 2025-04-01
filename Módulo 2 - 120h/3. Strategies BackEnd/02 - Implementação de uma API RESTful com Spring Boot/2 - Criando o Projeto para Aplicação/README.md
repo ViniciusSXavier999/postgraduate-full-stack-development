@@ -9,7 +9,7 @@
 ✅ Clicar em “Create new Spring Starter Project”
 
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o1.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o1.png" />
 
 ## 2. VAMOS ADICIONAR AS DEPENDÊNCIAS DO PROJETO
 
@@ -31,15 +31,15 @@
 🏆 Podemos ver o arquivo POM.xml, ele contém todas as dependências do projeto.
 
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o2.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o2.png" />
 
 ## 3. VAMOS CRIAR UM ENDOPOINT SÓ PARA TESTAR NOSSA APLICAÇÃO INICIAL
 
 - Primeiro adicionamos a anotação @RestController que diz que aquela classe é uma classe controladora e que vai gerar endPoints para nós.
 - Depois Criamos o método para retornar uma String e para isso utilizamos o método HTTP @GetMapping
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o3.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o3.png" />
 
 ### RESULTADO NO NAVEGADOR NA PORTA 8080
 
-<img width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o4.png" />
+<img width="900" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/CriandoProjetoAplica%C3%A7%C3%A3o4.png" />
