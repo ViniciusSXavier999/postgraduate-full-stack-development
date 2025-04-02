@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class ApiApplication {
 
 	public static void main(String[] args) {
@@ -14,9 +13,4 @@ public class ApiApplication {
 		
 	}
 	
-	@GetMapping("/")
-	public String hello() {
-		return "Olá tudo certo com a aplicação";
-	}
-
 }
