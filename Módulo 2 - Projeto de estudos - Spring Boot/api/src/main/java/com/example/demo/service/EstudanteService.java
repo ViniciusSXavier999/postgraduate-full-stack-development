@@ -7,15 +7,17 @@ import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Estudante;
 
+@Service
 public class EstudanteService {
 	
 	private static Map<Long, Estudante> listaEstudantes = new HashMap<>();
 	
 	// BUSCANDO ESTUDANTES POR ID
-	private ResponseEntity<Estudante> buscarEstudantePorId(Long id) {
+	public ResponseEntity<Estudante> buscarEstudantePorId(Long id) {
 		Estudante estudante  = listaEstudantes.get(id);
 		
 		if (estudante == null) {
@@ -27,12 +29,12 @@ public class EstudanteService {
 	
 	
 	// BUSCANDO TODOS OS ESTUDANTES
-	private List<Estudante> buscarTodosEstudantes() {
+	public List<Estudante> buscarTodosEstudantes() {
 		return new ArrayList<>(listaEstudantes.values());
 }
 	
 	// CADASTRAR ESTUDANTE
-	private ResponseEntity<Estudante> cadastrarEstudante(Estudante estudante) {
+	public ResponseEntity<Estudante> cadastrarEstudante(Estudante estudante) {
 		Estudante estudanteEncontrado  = listaEstudantes.get(estudante.getId());
 		
 		if (estudanteEncontrado == null) {
@@ -43,7 +45,7 @@ public class EstudanteService {
 	}
 	
 	// ATUALIZAR ESTUDANTE 
-	private ResponseEntity<Estudante> atualizarEstudante(Estudante estudante) {
+	public ResponseEntity<Estudante> atualizarEstudante(Estudante estudante) {
 		Estudante estudanteEncontrado  = listaEstudantes.get(estudante.getId());
 		
 		if (estudanteEncontrado == null) {
@@ -57,7 +59,7 @@ public class EstudanteService {
 	}
 	
 	// DELETAR ESTUDANTE
-	private ResponseEntity<String> excluirEstudante(Long id) {
+	public ResponseEntity<String> excluirEstudante(Long id) {
 		Estudante estudanteEncontrado  = listaEstudantes.get(id);
 		
 		if (estudanteEncontrado == null) {
