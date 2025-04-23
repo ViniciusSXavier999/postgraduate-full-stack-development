@@ -201,7 +201,7 @@ Em resumo, **cria o diretório (e os intermediários) no caminho especificado** 
 
 ### 2. AGORA VAMOS CRIAR OS 3 MÉTODOS QUE FALTAM.
 
-1. PRIMEIRO MÉTODO SERÁ O MÉTODO DE PEGAR EXTENSÃO DO ARQUIVO
+### 1. PRIMEIRO MÉTODO SERÁ O MÉTODO DE PEGAR EXTENSÃO DO ARQUIVO
 
 ```java
 	public String getContentType(HttpServletRequest request, Resource resource) {
@@ -331,7 +331,7 @@ Esse método:
 3. Isso é útil pra definir o **Content-Type** correto ao enviar arquivos via HTTP.
 
 
-2. SEGUNDO MÉTODO SERÁ O MÉTODO DE SALVAR ARQUIVO 
+### 2. SEGUNDO MÉTODO SERÁ O MÉTODO DE SALVAR ARQUIVO 
 
 ```java
 	public String salvarArquivo(MultipartFile file) {
@@ -496,7 +496,7 @@ Isso é uma tentativa de **path traversal** (navegar por diretórios acima), que
 ---
 
 
-3. TERCEIRO MÉTODO SERÁ RESONSÁVEL PELO DOWNLOAD DO ARQUIVO
+### 3. TERCEIRO MÉTODO SERÁ RESONSÁVEL PELO DOWNLOAD DO ARQUIVO
 
 🔒
 
