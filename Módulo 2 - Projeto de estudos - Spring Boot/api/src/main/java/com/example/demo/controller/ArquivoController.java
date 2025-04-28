@@ -33,7 +33,7 @@ public class ArquivoController {
 		String nomeArquivo = arquivoService.salvarArquivo(file);
 		
 		String caminhoArquivo = ServletUriComponentsBuilder.fromCurrentContextPath()
-				.path("/arquivos/downloadArquivo")
+				.path("/arquivos/downloadArquivo/")
 				.path(nomeArquivo).toUriString();
 		
 		return new Arquivo(nomeArquivo, caminhoArquivo, file.getContentType(), file.getSize());
