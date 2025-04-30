@@ -5,7 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -32,8 +35,8 @@ public class EstudanteService {
 	}
 
 	// BUSCANDO TODOS OS ESTUDANTES
-	public List<Estudante> buscarTodosEstudantes() {
-		return repository.findAll();
+	public Page<Estudante> buscarTodosEstudantes(PageRequest page) {
+		return repository.findAll(page);
 	}
 
 	// CADASTRAR ESTUDANTE

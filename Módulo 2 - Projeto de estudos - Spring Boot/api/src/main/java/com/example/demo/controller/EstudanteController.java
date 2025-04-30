@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -35,8 +37,9 @@ public class EstudanteController {
 
 	// BUSCANDO TODOS OS ESTUDANTES
 	@GetMapping
-	public List<Estudante> buscarTodosEstudantes() {
-		return estudanteService.buscarTodosEstudantes();
+	public Page<Estudante> buscarTodosEstudantes(@RequestParam(defaultValue = "0") Integer pagina, @RequestParam(defaultValue = "5")  Integer itensPorPagina) {
+		
+		return estudanteService.buscarTodosEstudantes(PageRequest.of(pagina, itensPorPagina));
 	}
 
 	// CADASTRAR ESTUDANTE
