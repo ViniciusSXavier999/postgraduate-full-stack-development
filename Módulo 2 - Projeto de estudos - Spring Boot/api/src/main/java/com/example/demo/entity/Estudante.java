@@ -1,6 +1,9 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -8,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -25,16 +29,25 @@ public class Estudante {
 	@JoinColumn(name = "endereco_id", referencedColumnName = "id")
 	private Endereco endereco;
 	
+	@OneToMany(mappedBy = "estudante", cascade = CascadeType.ALL, orphanRemoval = true) // ONE -> se refere a estudante.  // MANY -> se refere a livros
+	@JsonManagedReference 
+	private Set<Livro> livros;
 	
-	public Estudante(Long id, String nome, String email, LocalDate dataNascimento, Endereco endereco) {
+	
+    
+	
+	public Estudante(Long id, String nome, String email, LocalDate dataNascimento, Endereco endereco,
+			Set<Livro> livros) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
+		this.livros = livros;
 	}
-	
+
+
 	public Estudante(){
 	}
 	
@@ -71,10 +84,14 @@ public class Estudante {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	
-	
-	
+
+	public Set<Livro> getLivros() {
+		return livros;
+	}
+
+	public void setLivros(Set<Livro> livros) {
+		this.livros = livros;
+	}
 	
 
 }

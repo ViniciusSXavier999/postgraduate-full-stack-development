@@ -2,9 +2,10 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,7 +15,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Estudante;
+import com.example.demo.entity.Livro;
 import com.example.demo.repository.EstudanteRepository;
+import com.example.demo.repository.LivroRepository;
 
 @Service
 public class EstudanteService {
@@ -23,6 +26,9 @@ public class EstudanteService {
 
 	@Autowired
 	private EstudanteRepository repository;
+	
+	@Autowired
+	private LivroRepository livroRepository;
 
 	// BUSCANDO ESTUDANTES POR ID
 	public ResponseEntity<Estudante> buscarEstudantePorId(Long id) {
@@ -39,10 +45,50 @@ public class EstudanteService {
 		return repository.findAll(page);
 	}
 
+	/*
 	// CADASTRAR ESTUDANTE
 	public ResponseEntity<Estudante> cadastrarEstudante(Estudante estudante) {
+		
+		
+		// Estamos pegando os livros e salvando na váriavel "livros"
+		Set<Livro> livros = estudante.getLivros();
+		
+		// Vou settar os livros de estudante para null
+		estudante.setLivros(new HashSet<>());
+		
+		// Em seguida, vou salvar estudante
 		Estudante estudanteCadastrado = repository.save(estudante);
+		
+		// Vou realizar a iteração de estudantes
+		for (Livro livro: livros) {
+			livro.setEstudante(estudante.builder().id(estudante.getId().build()));
+			estudante.getLivros().add(livroRepository.save(livro));
+		}
+		
 		return ResponseEntity.status(HttpStatus.CREATED).body(estudanteCadastrado);
+	}
+	*/
+	
+	public ResponseEntity<Estudante> cadastrarEstudante(Estudante estudante) {
+	    
+	    // Pegamos os livros enviados junto com o estudante
+	    Set<Livro> livros = estudante.getLivros();
+
+	    // Esvaziamos temporariamente os livros do estudante
+	    estudante.setLivros(new HashSet<>());
+
+	    // Salvamos o estudante no banco de dados (agora ele terá um ID)
+	    Estudante estudanteCadastrado = repository.save(estudante);
+
+	    // Para cada livro recebido, associamos ao estudante e salvamos
+	    for (Livro livro : livros) {
+	        livro.setEstudante(estudanteCadastrado); // associando corretamente o estudante salvo
+	        Livro livroSalvo = livroRepository.save(livro); // salvando o livro
+	        estudanteCadastrado.getLivros().add(livroSalvo); // adicionando o livro salvo ao estudante
+	    }
+
+	    // Retornamos o estudante com status 201 CREATED
+	    return ResponseEntity.status(HttpStatus.CREATED).body(estudanteCadastrado);
 	}
 
 	// ATUALIZAR ESTUDANTE
