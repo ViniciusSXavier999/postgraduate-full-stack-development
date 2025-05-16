@@ -95,6 +95,13 @@ public class EstudanteService {
 	public ResponseEntity<Estudante> atualizarEstudante(Long id, Estudante estudante) {
 		
 		if (repository.existsById(id)) {
+			estudante.setId(id);
+			
+			for(Livro livro: estudante.getLivros()) {
+				livro.setEstudante(estudante);
+			}
+			
+			
 			Estudante estudanteCadastrado = repository.save(estudante);
 			return ResponseEntity.status(HttpStatus.OK).body(estudanteCadastrado);
 		} else {

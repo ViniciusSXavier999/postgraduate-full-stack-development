@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -31,13 +32,17 @@ public class Estudante {
 	
 	@OneToMany(mappedBy = "estudante", cascade = CascadeType.ALL, orphanRemoval = true) // ONE -> se refere a estudante.  // MANY -> se refere a livros
 	@JsonManagedReference 
-	private Set<Livro> livros;
+	private Set<Livro> livros = new HashSet<>();
+	
+	@OneToMany(mappedBy = "estudante")
+	private Set<AvaliacaoCurso> avaliacaoCursos;
 	
 	
     
-	
-	public Estudante(Long id, String nome, String email, LocalDate dataNascimento, Endereco endereco,
-			Set<Livro> livros) {
+
+
+	public Estudante(Long id, String nome, String email, LocalDate dataNascimento, Endereco endereco, Set<Livro> livros,
+			Set<AvaliacaoCurso> avaliacaoCursos) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -45,6 +50,7 @@ public class Estudante {
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
 		this.livros = livros;
+		this.avaliacaoCursos = avaliacaoCursos;
 	}
 
 
@@ -92,6 +98,17 @@ public class Estudante {
 	public void setLivros(Set<Livro> livros) {
 		this.livros = livros;
 	}
+
+
+	public Set<AvaliacaoCurso> getAvaliacaoCursos() {
+		return avaliacaoCursos;
+	}
+
+
+	public void setAvaliacaoCursos(Set<AvaliacaoCurso> avaliacaoCursos) {
+		this.avaliacaoCursos = avaliacaoCursos;
+	}
+	
 	
 
 }

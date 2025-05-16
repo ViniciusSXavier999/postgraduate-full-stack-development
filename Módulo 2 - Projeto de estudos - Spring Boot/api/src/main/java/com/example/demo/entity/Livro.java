@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,6 +21,7 @@ public class Livro {
 	@ManyToOne
 	@JoinColumn(name = "estudante_id", nullable = false)
 	@JsonBackReference
+	@JsonIgnore
 	private Estudante estudante;
 	
 	public Livro() {
