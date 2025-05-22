@@ -15,14 +15,14 @@ public class AvaliacaoCurso {
 	@ManyToOne
 	@MapsId("estudanteId") // faz referencia ao id do estudante
 	@JoinColumn(name = "estudante_id")
-	private Estudante estudante;
+	Estudante estudante;
 	
 	@ManyToOne
 	@MapsId("cursoId") // faz referencia ao id do curso
 	@JoinColumn(name = "curso_id")
-	private Curso curso;
+	Curso curso;
 	
-	private int notaDaAvaliacao;
+    int notaDaAvaliacao;
 	
 	public AvaliacaoCurso() {
 	}

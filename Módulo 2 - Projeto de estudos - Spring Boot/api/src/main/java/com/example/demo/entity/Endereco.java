@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +23,7 @@ public class Endereco {
 	
 	// REALIZANDO O ASSOCIAMENTO DE UM ENDEREÇO PARA UM ESTUDANTE
 	@OneToOne(mappedBy = "endereco")
+	@JsonIgnore
 	private Estudante estudante;
 	
 	public Endereco() {

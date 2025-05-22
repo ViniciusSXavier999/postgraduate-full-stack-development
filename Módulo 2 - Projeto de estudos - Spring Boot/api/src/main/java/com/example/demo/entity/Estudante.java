@@ -37,7 +37,7 @@ public class Estudante {
 	
 	@OneToMany(mappedBy = "estudante")
 	@JsonIgnore
-	private Set<AvaliacaoCurso> avaliacaoCursos;
+	private Set<AvaliacaoCurso> avaliacaoCursos; // esse nome tem que ser o mesmo que esta no repository para criação da query
 	
 	
     

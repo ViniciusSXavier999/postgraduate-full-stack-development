@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Estudante;
+import com.example.demo.repository.EstudanteRepository;
 import com.example.demo.service.EstudanteService;
 
 @RestController
@@ -27,6 +28,8 @@ public class EstudanteController {
 	
 	@Autowired
 	private EstudanteService estudanteService;
+	
+
 
 	// BUSCANDO ESTUDANTES POR ID
 	@GetMapping("/{id}")
@@ -60,6 +63,12 @@ public class EstudanteController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> excluirEstudante(@PathVariable Long id) {
 		return estudanteService.excluirEstudante(id);
+	}
+	
+	// ESTUDANTES QUE AINDA NÃO AVALIARAM NENHUM CURSO
+	@GetMapping("/naoAvaliaram")
+	public List<Estudante> buscarEstudantesQueNaoAvaliaram() {
+		return estudanteService.buscarEstudanteQueNaoAvaliaram();
 	}
 
 }

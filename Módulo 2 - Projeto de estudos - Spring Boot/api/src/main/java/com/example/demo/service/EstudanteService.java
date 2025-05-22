@@ -5,8 +5,10 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,6 +20,8 @@ import com.example.demo.entity.Estudante;
 import com.example.demo.entity.Livro;
 import com.example.demo.repository.EstudanteRepository;
 import com.example.demo.repository.LivroRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class EstudanteService {
@@ -39,6 +43,31 @@ public class EstudanteService {
 
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 	}
+	
+	// UTILIZANDO A ANOTAÇÃO @TRANSACTIONAL PARA BUSCAR ESTUDANTE POR ID E O SEUS LIVROS 
+	
+	/*
+	@Transactional
+	public ResponseEntity<Estudante> buscarEstudantePorId(Long id) {
+		if (repository.existsById(id)) {
+			Optional<Estudante> estudanteOpt = repository.findById(id);
+			
+			// #1 - Usar a entidade livros de alguma forma
+			estudanteOpt.ifPresent(e -> {
+				Set<Livro> livros = e.getLivros();
+				System.out.println(livros.size());
+			});
+			
+			// #2 fazer o carregamento explicito de livros
+			// Hibernate.initialize(estudanteOpt.get().getLivros());
+			return ResponseEntity.status(HttpStatus.OK).body(repository.findById(id).get());
+
+		}
+
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+	}
+
+*/
 
 	// BUSCANDO TODOS OS ESTUDANTES
 	public Page<Estudante> buscarTodosEstudantes(PageRequest page) {
@@ -121,5 +150,10 @@ public class EstudanteService {
 		}
 
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Estudante não encontrado!");
+	}
+	
+	
+	public List<Estudante> buscarEstudanteQueNaoAvaliaram(){
+		return repository.findByAvaliacaoCursosEstudanteIsNull();
 	}
 }
