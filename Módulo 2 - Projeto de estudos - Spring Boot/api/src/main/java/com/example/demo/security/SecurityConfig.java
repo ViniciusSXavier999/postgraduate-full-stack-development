@@ -28,7 +28,18 @@ public class SecurityConfig {
 		http.securityMatcher("/**") // escopo da segurança
 				.csrf(csrf -> csrf.disable()) // só configura CSRF
 				.authorizeHttpRequests(
-						auth -> auth.requestMatchers("/arquivos/upload").permitAll().anyRequest().authenticated())
+						auth -> auth.requestMatchers(
+								"/arquivos/upload",
+								"/v3/api-docs/**",
+			                    "/swagger-ui.html",
+			                    "/swagger-ui/**",
+			                    "/swagger-resources/**",
+			                    "/swagger-resources",
+			                    "/configuration/ui",
+			                    "/configuration/security",
+			                    "/api/hello",
+			                    "/webjars/**"
+								).permitAll().anyRequest().authenticated())
 				.cors(Customizer.withDefaults()) // ou .cors(cors -> ...)
 				.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.decoder(jwtDecoder())) // ← Adicionamos suporte ao
 																								// token JWT do Auth0
