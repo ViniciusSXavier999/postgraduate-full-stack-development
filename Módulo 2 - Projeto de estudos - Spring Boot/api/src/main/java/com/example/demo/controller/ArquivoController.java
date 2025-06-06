@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.demo.entity.Arquivo;
 import com.example.demo.service.ArquivoService;
+
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -28,8 +29,9 @@ public class ArquivoController {
 	private ArquivoService arquivoService;
 	
 	/* Como vamos passar o arquivo no body, vamos ter que usar um post mapping */
-	@PostMapping("upload")
-	public Arquivo uploadArquivo(@RequestParam("file") MultipartFile file) {
+	
+	@PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	public Arquivo uploadArquivo(@RequestPart("file") MultipartFile file) {
 		String nomeArquivo = arquivoService.salvarArquivo(file);
 		
 		String caminhoArquivo = ServletUriComponentsBuilder.fromCurrentContextPath()

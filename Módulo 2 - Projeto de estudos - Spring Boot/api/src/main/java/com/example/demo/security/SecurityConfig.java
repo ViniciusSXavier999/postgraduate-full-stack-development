@@ -22,7 +22,25 @@ public class SecurityConfig {
 
 	@Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
 	private String issuer;
+	
+	// MÉTODO QUE PERMITE REQUISIÇÕES DE QUALQUER ENDPOINT
+	
 
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+            .securityMatcher("/**") // Aplica a segurança a todas as rotas
+            .csrf(csrf -> csrf.disable()) // Desativa CSRF
+            .authorizeHttpRequests(auth -> auth
+                .anyRequest().permitAll() // Libera tudo
+            )
+            .cors(Customizer.withDefaults()); // Habilita CORS com defaults (opcional)
+
+        return http.build();
+    }
+    
+    
+ /*
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.securityMatcher("/**") // escopo da segurança
@@ -47,7 +65,9 @@ public class SecurityConfig {
 				);
 		return http.build();
 	}
-
+*/
+    
+    
 	@Bean
 	public JwtDecoder jwtDecoder() {
 		NimbusJwtDecoder decoder = JwtDecoders.fromIssuerLocation(issuer);
