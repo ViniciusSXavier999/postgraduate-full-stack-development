@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,8 @@ import com.example.demo.entity.Estudante;
 import com.example.demo.repository.EstudanteRepository;
 import com.example.demo.service.EstudanteService;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @RestController
 @RequestMapping("estudantes")
 public class EstudanteController {
@@ -32,7 +33,8 @@ public class EstudanteController {
 
 
 	// BUSCANDO ESTUDANTES POR ID
-	@GetMapping("/{id}")
+	@GetMapping(value = "/{id}", produces = "application/json")
+	@Operation(summary = "Buscar estudantes por id", description = "Retorna um estudante de acordo com o seu ID fornecido")
 	public ResponseEntity<Estudante> buscarEstudantePorId(@PathVariable Long id) {
 		return estudanteService.buscarEstudantePorId(id);
 	
