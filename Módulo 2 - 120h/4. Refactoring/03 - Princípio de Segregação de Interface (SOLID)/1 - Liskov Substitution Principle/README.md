@@ -75,7 +75,7 @@ Em outras palavras, o que queremos é que os objetos de nossas subclasses se com
 
 ### ESTRUTURA QUE RESUME O QUE ESTAMOS PROPONDO
 
-<img width="600" src = "hhttps://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/liskovSubstitutionPrinciple1.png" />
+<img width="600" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/P%C3%B3sGradua%C3%A7%C3%A3o/liskovSubstitutionPrinciple1.png" />
 
 ---
 
