@@ -1,0 +1,10 @@
+package refatoracao.estudos.solid.dependency.inversion.principle;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
