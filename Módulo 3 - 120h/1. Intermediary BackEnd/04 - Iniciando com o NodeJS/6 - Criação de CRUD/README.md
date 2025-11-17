@@ -18,7 +18,6 @@
 
 🏆 Esse router é o arquivo que vai disponibilizar para o front-end as rotas que podem ser acessadas no nosso back-end
 
-
 🏆 Todos os controllers vão começar da tela inicial que é o (”/”), essa é a raiz da aplicação.
 
 
@@ -165,9 +164,7 @@ Esse arquivo:
 ---
 
 
-💡
-
-O QUE FAZ ESSA LINHA DE CÓDIGO `let router = express.Router()`?
+💡 O QUE FAZ ESSA LINHA DE CÓDIGO `let router = express.Router()`?
 
 ### 🧩 Linha:
 
@@ -941,6 +938,7 @@ async function deleteUserById(id) {
 
 A função `deleteUserById` **remove um usuário do banco de dados** com base no ID informado e **retorna quantos registros foram apagados** (geralmente `1` ou `0`).
 
+</aside>
 
 ### FUNÇÃO QUE ATUALIZA USUÁRIO
 
@@ -1059,7 +1057,6 @@ Ela retorna uma mensagem informando **se o usuário foi atualizado com sucesso**
 
 🏆 VOU REPLICAR ESSAS OPERAÇÕES PARA AS OUTRAS CLASSES DE REPOSITORIES DO MEU PROGRAMA
 
-
 ---
 
 🏆
@@ -1099,7 +1096,6 @@ export default router
 ```
 
 ### EXPLICAÇÃO DO CÓDIGO
-
 
 🏆
 
@@ -1233,16 +1229,25 @@ Exportamos o `router` para poder importar e usar no `app.js` com `app.use("/", r
 
 ---
 
-
 🏆
 
 ### GET
 
-```bash
-
+```jsx
+// MÉTODO DE GET
+async function getAllUsers(req, res) {
+    try {
+        const allUsers = await userService.getAllUsers()
+        return res.status(200).json(allUsers)
+    } catch (error) {
+        console.error("Erro ao buscar usuários:", error)
+        return res.status(500).json({ message: "Erro ao buscar usuários" })
+    }
+}
 ```
 
 ### EXPLICAÇÃO DO CÓDIGO
+
 
 🏆
 
@@ -1384,7 +1389,6 @@ router.get("/user/:id", getUserById)
 
 ### EXPLICAÇÃO DO CÓDIGO
 
-
 🏆
 
 ---
@@ -1509,3 +1513,318 @@ Esse método cria uma rota que:
 2. Usa o **`userService`** para buscar esse usuário no banco;
 3. Retorna o usuário encontrado com **status 200**;
 4. Se algo der errado, mostra o erro no console e retorna um **status 500** com mensagem de erro.
+
+---
+
+
+🏆
+
+### MÉTODO UPDATE
+
+```jsx
+async function updateUser(req, res) {
+    try {
+        const userModel = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            gender: req.body.gender
+        }
+
+        const user = await userService.updateUserById(req.params, userModel)
+        return res.status(201).json(user)
+    } catch (error) {
+        console.error("Erro em addUser:", error)
+        return res.status(500).json({ message: "Erro ao salvar usuário", error: error.message })
+    }
+}
+
+router.put("/updateUser/:id", updateUser)
+```
+
+### EXPLICAÇÃO DO CÓDIGO
+
+🏆
+
+```jsx
+async function updateUser(req, res) {
+
+```
+
+Aqui definimos uma **função assíncrona** chamada `updateUser`.
+
+Ela será usada para tratar requisições PUT, ou seja: **atualizar um usuário existente**.
+
+---
+
+```jsx
+    try {
+
+```
+
+Abrimos um bloco `try`, onde colocamos o código principal.
+
+Se qualquer parte falhar, o fluxo vai para o `catch`.
+
+---
+
+```jsx
+        const userModel = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            gender: req.body.gender
+        }
+
+```
+
+Criamos um objeto chamado **userModel** que contém os novos valores enviados pelo cliente.
+
+Esses dados vêm do corpo da requisição (req.body).
+
+Exemplo de JSON enviado no PUT:
+
+```json
+{
+  "first_name": "João",
+  "last_name": "Silva",
+  "email": "joao@email.com",
+  "gender": "male"
+}
+
+```
+
+Esse objeto será enviado ao service para ser usado na atualização do usuário.
+
+---
+
+```jsx
+        const user = await userService.updateUserById(req.params, userModel)
+
+```
+
+Aqui chamamos o **service** responsável por atualizar o usuário no banco.
+
+⚠ *Mas atenção:*
+
+`req.params` está sendo enviado inteiro.
+
+Geralmente o correto seria:
+
+```jsx
+req.params.id
+
+```
+
+Portanto o certo seria:
+
+```jsx
+const user = await userService.updateUserById(req.params.id, userModel)
+
+```
+
+Se o seu service espera o id direto, é isso que ele deve receber.
+
+Essa linha faz:
+
+- pega o **id** da URL
+- pega os novos dados
+- chama o método de atualização
+- aguarda o banco de dados responder (por isso o `await`)
+
+---
+
+```jsx
+        return res.status(201).json(user)
+
+```
+
+Se deu tudo certo:
+
+- enviamos status **201 (Created/Updated)**
+- devolvemos o objeto atualizado como resposta
+
+---
+
+```jsx
+    } catch (error) {
+
+```
+
+Se der qualquer erro dentro do try — banco, service, id inválido etc. — o fluxo vem para cá.
+
+---
+
+```jsx
+        console.error("Erro em addUser:", error)
+
+```
+
+Mostra o erro completo no console do servidor.
+
+Obs: aqui está escrito *addUser*, mas deveria ser **updateUser**.
+
+---
+
+```jsx
+        return res.status(500).json({ message: "Erro ao salvar usuário", error: error.message })
+
+```
+
+Retorna status **500**, que significa erro interno, junto com uma mensagem e o erro real dentro de `error.message`.
+
+---
+
+```jsx
+router.put("/updateUser/:id", updateUser)
+
+```
+
+Aqui conectamos a rota ao controller.
+
+Ou seja:
+
+Quando alguém fizer:
+
+```
+PUT /updateUser/5
+```
+
+O Express chama a função:
+
+```
+updateUser(req, res)
+
+```
+
+---
+
+🏆
+
+### MÉTODO DELETE
+
+```jsx
+async function deleteUserById(req, res) {
+    try {
+        const userId = req.params.id
+        const user = await userService.deleteUserById(userId)
+        return res.status(200).json(user)
+    } catch (error) {
+        console.error("Erro ao deletar usuário:", error)
+        return res.status(500).json({ message: "Erro ao deletar usuário" })
+    }
+}
+```
+
+### EXPLICAÇÃO DO CÓDIGO
+
+🏆
+
+```jsx
+async function deleteUserById(req, res) {
+
+```
+
+Aqui criamos uma **função assíncrona** chamada `deleteUserById`.
+
+Ela será usada como handler da rota de DELETE — ou seja, quando alguém chamar a rota para deletar um usuário, essa função será executada.
+
+---
+
+```jsx
+    try {
+
+```
+
+Abrimos o `try`, onde colocamos o código principal que pode dar erro.
+
+Se qualquer coisa falhar aqui dentro, o fluxo pula para o `catch`.
+
+---
+
+```jsx
+        const userId = req.params.id
+
+```
+
+Pegamos o valor do `id` que vem na URL.
+
+Exemplo:
+
+- Se o cliente chama `DELETE /deleteUser/7`, então `req.params.id` é `"7"`.
+
+Esse ID será usado para deletar o usuário no banco.
+
+---
+
+```jsx
+        const user = await userService.deleteUserById(userId)
+
+```
+
+Aqui chamamos o método do **service**, responsável por comunicar-se com o repositório ou diretamente com o ORM (como Sequelize).
+
+`userService.deleteUserById(userId)` retorna:
+
+- O usuário deletado
+    
+    ou
+    
+- Alguma confirmação da remoção (depende de como o service foi implementado)
+
+O `await` faz o código esperar até que o banco responda.
+
+---
+
+```jsx
+        return res.status(200).json(user)
+
+```
+
+Se deu tudo certo:
+
+✔ o usuário foi deletado
+
+✔ enviamos resposta com **status 200 (OK)**
+
+✔ junto com o resultado do serviço em JSON
+
+Pode ser o próprio usuário deletado ou `{ message: "Usuário deletado com sucesso" }`, dependendo da implementação interna.
+
+---
+
+```jsx
+    } catch (error) {
+
+```
+
+Se qualquer parte do código dentro do `try` der erro — ID inexistente, falha no banco, problema no service — o fluxo vem pra cá.
+
+---
+
+```jsx
+        console.error("Erro ao deletar usuário:", error)
+
+```
+
+Mostramos o erro completo no console do servidor para ajudar no debug.
+
+---
+
+```jsx
+        return res.status(500).json({ message: "Erro ao deletar usuário" })
+
+```
+
+Enviamos uma resposta com **status 500**, que significa "erro interno no servidor".
+
+E mandamos uma mensagem simples para o cliente saber que houve falha.
+
+---
+
+🔹 **Resumo da função:**
+
+1. Pega o ID da URL
+2. Chama o service para deletar o usuário
+3. Responde com 200 se tudo ok
+4. Em caso de erro, responde com 500

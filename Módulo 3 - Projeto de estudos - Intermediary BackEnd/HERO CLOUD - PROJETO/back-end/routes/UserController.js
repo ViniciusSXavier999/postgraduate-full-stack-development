@@ -83,7 +83,7 @@ async function updateUser(req, res) {
             gender: req.body.gender
         }
 
-        const user = await userService.updateUserById(req.params, userModel)
+        const user = await userService.updateUserById(req.params.id, userModel)
         return res.status(201).json(user)
     } catch (error) {
         console.error("Erro em addUser:", error)
