@@ -1,3 +1,12 @@
+# 4 → TERCEIRA ETAPA: CONSTRUÇÃO DE APLICAÇÃO ANGULAR
+
+🏆 VAMOS PEGAR O HTML DO USER E REPLICAR PARA OS DEMAIS COMPONENTES DA NOSSA APLICAÇÃO 
+
+🏆
+
+### VAMOS REPLICAR ESSAS INFORMAÇÕES PARA OS OUTROS COMPONENTES
+
+```jsx
 import { Component } from '@angular/core';
 
 //add esses imports
@@ -43,53 +52,7 @@ export class TeacherFormComponent {
       ]
     }
   ];
+```
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private teacherService: TeacherService,
-    private sharedService: SharedService
-  ) {
+🏆 Daqui pra frente vamos começar a implementar método que geram ação na nossa tela e que geram a integração com o back-end
 
-    this.route.queryParams.subscribe(async (params: any) => {
-      if (params.id !== undefined && params.id !== null) {
-        this.teacher = await this.teacherService.get<any>({
-          url: `http://localhost:3000/teacher/${params.id}`,
-          params: {
-
-          }
-        });
-        this.model = this.teacher;
-      } else {
-        this.model = {}
-      }
-
-    });
-  }
-
-  async onSubmit(): Promise<void> {
-    if (this.form.valid) {
-      if (this.model?.id !== undefined && this.model?.id !== null) {
-        this.teacher = await this.teacherService.put<any>({
-          url: `http://localhost:3000/updateTeacher/${this.model?.id}`,
-          params: {
-
-          },
-          data: this.model
-        });
-
-      } else {
-        delete this.model?.id;
-        await this.teacherService.post<any>({
-          url: `http://localhost:3000/addTeacher`,
-          params: {
-
-          },
-          data: this.model
-        })
-      }
-
-    }
-    await this.router.navigate(['/teachers']);
-  }
-}
