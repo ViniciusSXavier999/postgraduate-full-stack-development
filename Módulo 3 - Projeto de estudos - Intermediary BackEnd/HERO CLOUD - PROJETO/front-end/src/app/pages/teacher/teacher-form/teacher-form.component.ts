@@ -67,6 +67,7 @@ export class TeacherFormComponent {
     });
   }
 
+  // QUANDO EU VOU ENVIAR OU ATUALIZAR UM NOVO DADO
   async onSubmit(): Promise<void> {
     if (this.form.valid) {
       if (this.model?.id !== undefined && this.model?.id !== null) {
