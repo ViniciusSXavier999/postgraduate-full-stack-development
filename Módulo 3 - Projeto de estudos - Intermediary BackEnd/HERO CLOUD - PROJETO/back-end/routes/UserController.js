@@ -1,7 +1,24 @@
 import express from "express";
+import userService from "../services/UserService.js"
+import multer from "multer";
+import process from "process";
+
+
+
 let router = express.Router();
 
-import userService from "../services/UserService.js"
+// MÉTODO QUE VAI SALVAR O ARQUIVO
+const storage = multer.diskStorage({
+    destination: function(req, file, callback) {
+        callback(null, './images')
+    },
+    filename: function(req, file, callback) {
+        callback(null, req.body.first_name + "_" + req.body.last_name + "_" + Date.now() + file.originalname)
+    }
+})
+
+// CAMINHO QUE FAZ O ENVIO DA FOTO PARA ATUALIZAÇÃO
+const upload = multer({storage: storage}).single('file') // esse parametro vai ser enviado pelo front-end
 
 
 // MÉTODO DE CREATE
@@ -12,7 +29,8 @@ async function addUser(req, res) {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
-            gender: req.body.gender
+            gender: req.body.gender,
+            profile_picture: req.file.path
         }
 
         const user = await userService.saveUser(userModel)
@@ -80,7 +98,8 @@ async function updateUser(req, res) {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
-            gender: req.body.gender
+            gender: req.body.gender,
+            profile_picture: req.file.path
         }
 
         const user = await userService.updateUserById(req.params.id, userModel)
